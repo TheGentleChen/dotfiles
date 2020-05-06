@@ -173,30 +173,30 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '#2D2A2E'
-    foreground: '#FCFCFA'
+    background: '#202020'
+    foreground: '#FCFCFC'
 
   # Normal colors
   normal:
     black:   '#403E41'
     red:     '#FF6188'
     green:   '#A9DC76'
-    yellow:  '#FFD14D'
-    blue:    '#7EAAF7'
-    magenta: '#D33682'
+    yellow:  '#F2F244'
+    blue:    '#1EAAF7'
+    magenta: '#D31682'
     cyan:    '#35CAC0'
-    white:   '#FCFCFA'
+    white:   '#FCFCFC'
 
   # Bright colors
   bright:
     black:   '#727072'
     red:     '#FF6188'
-    green:   '#A9DC76'
+    green:   '#19DC76'
     yellow:  '#FFD14D'
-    blue:    '#7EAAF7'
-    magenta: '#D33682'
-    cyan:    '#35CAC0'
-    white:   '#FCFCFA'
+    blue:    '#4EAAF7'
+    magenta: '#D31682'
+    cyan:    '#15FAF0'
+    white:   '#FCFCFC'
 # Colors (Tomorrow Night Bright)
 #colors:
   # Default colors

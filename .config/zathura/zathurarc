@@ -1,0 +1,44 @@
+set adjust-open width
+set window-title-basename "true"
+set selection-clipboard clipboard
+set font "NimbusSans Regular 10"
+
+# normal mode
+map [normal] k scroll down
+map [normal] i scroll up
+map [normal] j scroll left
+map [normal] l scroll right
+map [normal] K scroll half-down
+map [normal] I scroll half-up
+map [normal] <Space> scroll full-down
+map [normal] <S-Space> scroll full-up
+map [normal] h scroll page-top
+map [normal] b scroll page-bottom
+map [normal] <C-j> jumplist backwark
+map [normal] <C-l> jumplist forward
+map [normal] r rotate rotate-cw
+map [normal] R rotate rotate-ccw
+map [normal] <C-r> reload
+map [normal] <Esc> abort
+map [normal] a adjust_window best-fit
+map [normal] s adjust_window width
+map [normal] n search next
+map [normal] N search previous
+map [normal] f follow
+map [normal] F display_link
+map [normal] p change_mode presentation
+map [normal] <C-f> toggle_fullscreen
+map [normal] M toggle_inputbar
+map [normal] S toggle_statusbar
+map [normal] [ zoom in
+map [normal] ] zoom out
+unmap [normal] q
+
+# index mode
+map [index] k navigate_index down
+map [index] i navigate_index up
+map [index] j navigate_index expand
+map [index] l navigate_index collapse
+map [index] J navigate_index expand-all
+map [index] L navigate_index collapse-all
+map [index] <Tab> change_mode normal

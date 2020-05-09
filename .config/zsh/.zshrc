@@ -123,6 +123,10 @@ alias logout="kill -9 -1"
 alias i3conf="cd $HOME/.config/i3/"
 alias pac="sudo pacman"
 alias kill="kill -9"
+alias g++="g++ -std=c++2a -g -Wall -o"
+alias gcc="gcc -std=c11 -g -Wall -o"
+alias clang++="clang++ -std=c++2a -g -Wall -o"
+alias clang="clang -std=c11 -g -Wall -o"
 bindkey '^ ' autosuggest-accept
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.

@@ -127,6 +127,7 @@ alias g++="g++ -std=c++2a -g -Wall -o"
 alias gcc="gcc -std=c11 -g -Wall -o"
 alias clang++="clang++ -std=c++2a -g -Wall -o"
 alias clang="clang -std=c11 -g -Wall -o"
+alias getport="ss -plat"
 bindkey '^ ' autosuggest-accept
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.

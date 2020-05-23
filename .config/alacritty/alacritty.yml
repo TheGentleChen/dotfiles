@@ -97,6 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
+    #family: SauceCodePro Nerd Font
     family: SauceCodePro Nerd Font
 
     # The `style` can be specified to pick a specific face.

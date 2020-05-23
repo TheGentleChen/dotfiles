@@ -3,8 +3,8 @@
 #============ | | |_ \   / __/ _ \| '_ \| |_  ============#
 #============ | |___) | | (_| (_) | | | |  _| ============#
 #============ |_|____/   \___\___/|_| |_|_|   ============#
-# This file originally by Rainbow Chen.
-
+#           This file originally by Rainbow Chen.         #
+#
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -79,8 +79,8 @@ for_window [class="netease-cloud-music"] floating enable
 for_window [class="netease-cloud-music"] border none
 
 # enable floating for deeping-file-manager
-for_window [class="Org.gnome.Nautilus"] floating enable
-for_window [class="Org.gnome.Nautilus"] border none
+# for_window [class="Org.gnome.Nautilus"] floating enable
+# for_window [class="Org.gnome.Nautilus"] border none
 
 # enable floating for Wine App
 for_window [class="Wine"] floating enable
@@ -115,7 +115,7 @@ bindsym $mod+Shift+Return split vertical; exec --no-startup-id $terminal;
 bindsym $mod+Ctrl+Return exec --no-startup-id $script/alacritty_samedir.sh
 
 bindsym $mod+semicolon exec --no-startup-id "$terminal -e ranger"
-bindsym $mod+Shift+semicolon exec --no-startup-id nautilus
+# bindsym $mod+Shift+semicolon exec --no-startup-id nautilus
 
 bindsym $mod+bracketleft workspace prev
 bindsym $mod+Shift+bracketleft move container to workspace prev

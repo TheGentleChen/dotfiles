@@ -278,7 +278,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86Tools exec --no-startup-id $script/touchpad_toggle.sh
 bindsym XF86Mail exec "$browser https://mail.163.com"
 bindsym XF86Search exec $browser
-bindsym XF86HomePage exec "$browser https://github.com/TheGentleChen"
+bindsym XF86HomePage exec "$browser https://github.com/rainbowhxch"
 bindsym XF86Calculator exec "$terminal -c python"
 
 # Start i3bar to display a workspace bar (plus the system information i3status

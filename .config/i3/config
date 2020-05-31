@@ -18,12 +18,33 @@ set $editor $EDITOR
 
 set $inner_gaps 10
 set $outer_gaps 5
+set $border_size pixel 2
 set $script $HOME/.config/i3/script
 set $xmodmap $HOME/.config/i3/xmodmap
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
+
+# Get colors from Xresources
+set_from_resource $foreground i3wm.foreground #000000
+set_from_resource $background i3wm.background #000000
+set_from_resource $black i3wm.color0 #000000
+set_from_resource $red i3wm.color1 #000000
+set_from_resource $green i3wm.color2 #000000
+set_from_resource $yellow i3wm.color3 #000000
+set_from_resource $blue i3wm.color4 #000000
+set_from_resource $magenta i3wm.color5 #000000
+set_from_resource $cyan i3wm.color6 #000000
+set_from_resource $white i3wm.color7 #000000
+set_from_resource $bright_black i3wm.color8 #000000
+set_from_resource $bright_red i3wm.color9 #000000
+set_from_resource $bright_green i3wm.color10 #000000
+set_from_resource $bright_yellow i3wm.color11 #000000
+set_from_resource $bright_blue i3wm.color12 #000000
+set_from_resource $bright_magenta i3wm.color13 #000000
+set_from_resource $bright_cyan i3wm.color14 #000000
+set_from_resource $bright_white i3wm.color15 #000000
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -68,11 +89,14 @@ workspace_layout default
 title_align left
 
 # normal|none|pixel
-default_border none
-default_floating_border none
+default_border $border_size
+default_floating_border $border_size
 
 # Allow focus windows follows mouse
 focus_follows_mouse yes
+
+# Warp mouse to the center when swithing focus to a window on a different output    output | none
+mouse_warping none
 
 # enable floating for netease-cloud-music
 for_window [class="netease-cloud-music"] floating enable
@@ -94,12 +118,12 @@ assign [class="Gimp"] number 6
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-client.urgent           #2f343a #900000 #ffffff #900000   #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-client.background       #ffffff
+client.focused          #4c7899 #285577 #ffffff $yellow   $bright_blue
+client.focused_inactive #333333 #5f676a #ffffff #44e50   $bright_black
+client.unfocused        #333333 #222222 #888888 #292d2e   $bright_black
+client.urgent           #2f343a #900000 #ffffff #900000   $bright_red
+client.placeholder      #000000 #0c0c0c #ffffff #000000   $cyan
+client.background       $background
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -280,6 +304,9 @@ bindsym XF86Mail exec "$browser https://mail.163.com"
 bindsym XF86Search exec $browser
 bindsym XF86HomePage exec "$browser https://github.com/rainbowhxch"
 bindsym XF86Calculator exec "$terminal -c python"
+bindsym XF86Launch5 exec --no-startup-id "i3lock -i ~/Pictures/i3lock.png"
+bindsym XF86Launch6 exec --no-startup-id xbacklight -inc 10
+bindsym XF86Launch7 exec --no-startup-id xbacklight -dec 10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

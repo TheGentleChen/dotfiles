@@ -419,3 +419,39 @@
 #    set_stack_tag = "volume"
 #
 # vim: ft=cfg
+[simonvic.Volume]
+	appname = simonvic.Volume
+	msg_urgency = normal
+	format = "%b"
+
+[simonvic.Volume-warning]
+	appname = simonvic.Volume
+	msg_urgency = critical
+	format = "%b"
+
+[simonvic.Microphone]
+	appname = simonvic.Microphone
+	msg_urgency = normal
+	format = "%b"
+
+[simonvic.Microphone-warning]
+	appname = simonvic.Microphone
+	msg_urgency = critical
+	format = "%b"
+
+[simonvic.Brightness]
+	appname = simonvic.Brightness
+	msg_urgency = normal
+	format = "%b"
+
+[simonvic.Playerctl]
+	appname = simonvic.Playerctl
+	format = "%b"
+
+[simonvic.Battery]
+	appname = simonvic.Battery
+	format = "%b"
+
+[simonvic.TODO]
+	appname = simonvic.TODO
+	format = "%b"

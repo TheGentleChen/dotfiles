@@ -8,7 +8,7 @@ export EDITOR="vim"
 export TERMINAL="alacritty"
 export BROWSER="google-chrome-stable"
 
-# Other Paths
+# Other Paths and Options
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"

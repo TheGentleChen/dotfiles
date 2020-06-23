@@ -69,7 +69,7 @@ exec_always --no-startup-id qv2ray
 # network managerment
 exec_always --no-startup-id nm-applet
 # status bar
-exec_always --no-startup-id $script/polybar.sh
+exec_always --no-startup-id $script/polybar-onlyscreen.sh
 # power managerment
 exec_always --no-startup-id xfce4-power-manager
 # bluetooth managerment
@@ -104,19 +104,23 @@ mouse_warping none
 for_window [class="netease-cloud-music"] floating enable
 for_window [class="netease-cloud-music"] border none
 
-# enable floating for deeping-file-manager
-# for_window [class="Org.gnome.Nautilus"] floating enable
-# for_window [class="Org.gnome.Nautilus"] border none
+# dropdown terminal
+for_window [instance="Dropdown" class="Alacritty"] floating enable
+for_window [instance="Dropdown" class="Alacritty"] move position center
+for_window [instance="Dropdown" class="Alacritty"] resize set 800 500
+for_window [instance="Dropdown" class="Alacritty"] move scratchpad
+exec --no-startup-id $terminal --class="Dropdown"
 
 # enable floating for Wine App
 for_window [class="Wine"] floating enable
 for_window [class="Wine"] border none
-# assign specific workspaces for tim and wechat
-# assign [class="Wine" instance="tim.exe"] number 4
-# assign [class="Wine" instance="wechat.exe"] number 5
+for_window [class="Wine" instance="tim.exe"] move scratchpad
+for_window [class="Wine" instance="wechat.exe"] move scratchpad
 
-assign [title="GIMP Startup"] number 6
-assign [class="Gimp"] number 6
+assign [title="GIMP Startup"] number 5
+assign [class="Gimp"] number 5
+for_window [window_role="gimp-dock"] floating disable; move left; resize shrink width 50 px or 50ppt
+for_window [window_role="gimp-toolbox"] floating disable; move right; resize grow width 30 px or 30ppt
 
 # colors
 # class                 border  backgr. text    indicator child_border
@@ -197,14 +201,16 @@ bindsym $mod+Shift+l move right 20 px
 bindsym $mod+Ctrl+l resize shrink width 10 px or 10 ppt
 
 
-bindsym $mod+m gaps inner all minus 2
-bindsym $mod+Shift+m gaps outer all minus 2
+bindsym $mod+m gaps inner all minus 5
+bindsym $mod+Shift+m gaps outer all minus 5
 
 bindsym $mod+n exec --no-startup-id netease-cloud-music
 bindsym $mod+o exec --no-startup-id libreoffice
 
-bindsym $mod+p gaps inner all plus 2
-bindsym $mod+Shift+p gaps outer all plus 2
+bindsym $mod+p gaps inner all plus 5
+
+# dropdown terminal
+bindsym $mod+Shift+p gaps outer all plus 5
 
 bindsym $mod+q kill
 bindsym $mod+Shift+q exec qtcreator
@@ -212,18 +218,23 @@ bindsym $mod+Shift+q exec qtcreator
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+s move scratchpad
-bindsym $mod+Shift+s scratchpad show
+bindsym $mod+s scratchpad show; move position center
+bindsym $mod+Shift+s move scratchpad
 
 bindsym $mod+t exec $script/tim.sh
+bindsym $mod+Shift+t [class="Wine" instance="tim.exe"] scratchpad show
 
 # split in vertical orientation
 bindsym $mod+v splitv
 
 bindsym $mod+w exec $script/wechat.sh
+bindsym $mod+Shift+w [class="Wine" instance="wechat.exe"] scratchpad show
 
 # gaps
 gaps inner $inner_gaps
+
+workspace $ws5 gaps inner 0
+workspace $ws5 gaps outer 0
 
 # enter fullscreen mode for the focused container
 # workspace back and forth

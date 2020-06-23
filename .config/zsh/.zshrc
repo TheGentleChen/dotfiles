@@ -18,8 +18,8 @@ export ZSH="/home/ch/.oh-my-zsh"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="dracula"
 # DRACULA_DISPLAY_TIME=1
-# DRACULA_DISPLAY_CONTEXT=1
-DRACULA_ARROW_ICON="🔶"
+DRACULA_DISPLAY_CONTEXT=1
+DRACULA_ARROW_ICON=" "
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

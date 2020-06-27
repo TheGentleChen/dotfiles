@@ -19,7 +19,7 @@ export ZSH="/home/ch/.oh-my-zsh"
 ZSH_THEME="dracula"
 # DRACULA_DISPLAY_TIME=1
 DRACULA_DISPLAY_CONTEXT=1
-DRACULA_ARROW_ICON=" "
+DRACULA_ARROW_ICON="@"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -126,10 +126,10 @@ alias ts="trans -shell"
 alias logout="kill -9 -1"
 alias pac="sudo pacman"
 alias kill="kill -9"
-# alias g++="g++ -std=c++2a -g -Wall -o"
-alias gcc="gcc -std=c11 -g -Wall -o"
-# alias clang++="clang++ -std=c++2a -g -Wall -o"
-alias clang="clang -std=c11 -g -Wall -o"
+alias "g++"="g++ -std=c++2a -g -Wall"
+alias gcc="gcc -std=c11 -g -Wall"
+alias "clang++"="clang++ -std=c++2a -g -Wall"
+alias clang="clang -std=c11 -g -Wall"
 alias getport="ss -plat"
 bindkey '^ ' autosuggest-accept
 

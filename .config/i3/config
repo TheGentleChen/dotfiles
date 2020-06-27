@@ -114,8 +114,6 @@ exec --no-startup-id $terminal --class="Dropdown"
 # enable floating for Wine App
 for_window [class="Wine"] floating enable
 for_window [class="Wine"] border none
-for_window [class="Wine" instance="tim.exe"] move scratchpad
-for_window [class="Wine" instance="wechat.exe"] move scratchpad
 
 assign [title="GIMP Startup"] number 5
 assign [class="Gimp"] number 5

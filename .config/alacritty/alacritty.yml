@@ -218,7 +218,53 @@ schemes:
       cyan:    '#9aedfe'
       white:   '#e6e6e6'
 
-colors: *dracula
+  arthur: &arthur
+    primary:
+      background: '#282a36'
+      foreground: '#f8f8f2'
+    normal:
+      black:   '#000000'
+      red:     '#fd1812'
+      green:   '#50fa7b'
+      yellow:  '#f5b324'
+      blue:    '#204e9c'
+      magenta: '#eee93b'
+      cyan:    '#4e8dc3'
+      white:   '#bfbfbf'
+    bright:
+      black:   '#677b80'
+      red:     '#ff6e67'
+      green:   '#5af78e'
+      yellow:  '#f4f99d'
+      blue:    '#caa9fa'
+      magenta: '#ff92d0'
+      cyan:    '#9aedfe'
+      white:   '#e6e6e6'
+
+  onedark: &onedark
+    primary:
+      background: '#1e2127'
+      foreground: '#abb2bf'
+    normal:
+      black:   '#282c34'
+      red:     '#e06c75'
+      green:   '#98c379'
+      yellow:  '#e5c07b'
+      blue:    '#61afef'
+      magenta: '#c678dd'
+      cyan:    '#56b6c2'
+      white:   '#abb2bf'
+    bright:
+      black:   '#5c6370'
+      red:     '#e05c75'
+      green:   '#78c379'
+      yellow:  '#e5b07b'
+      blue:    '#61bfef'
+      magenta: '#c688ed'
+      cyan:    '#56c6c2'
+      white:   '#ffffff'
+
+colors: *onedark
 
     # Bright and dim foreground colors
     #

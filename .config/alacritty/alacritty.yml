@@ -266,6 +266,29 @@ schemes:
       cyan:    '#56c6c2'
       white:   '#cccccc'
 
+  lightfresh: &lightfresh
+    primary:
+      background: '#101010'
+      foreground: '#c0c0c0'
+    normal:
+      black:   '#101010'
+      red:     '#efa6a2'
+      green:   '#80c990'
+      yellow:  '#a69460'
+      blue:    '#a3b8ef'
+      magenta: '#e6a3dc'
+      cyan:    '#50cacd'
+      white:   '#808080'
+    bright:
+      black:   '#454545'
+      red:     '#e0af85'
+      green:   '#5accaf'
+      yellow:  '#c8c874'
+      blue:    '#ccaced'
+      magenta: '#f2a1c2'
+      cyan:    '#74c3e4'
+      white:   '#c0c0c0'
+
 colors: *onedark
 
     # Bright and dim foreground colors

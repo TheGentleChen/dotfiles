@@ -111,6 +111,7 @@ source $ZSH/oh-my-zsh.sh
 alias c="clear"
 alias s="neofetch | lolcat"
 alias r="ranger"
+alias v="nvim"
 alias sudo="sudo -E"
 alias du="du -h"
 alias df="df -h"

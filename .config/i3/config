@@ -216,7 +216,7 @@ bindsym $mod+Shift+q exec qtcreator
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+s scratchpad show; move position center
+bindsym $mod+s [instance="Dropdown" class="Alacritty"] scratchpad show; move position center
 bindsym $mod+Shift+s move scratchpad
 
 bindsym $mod+t exec $script/tim.sh

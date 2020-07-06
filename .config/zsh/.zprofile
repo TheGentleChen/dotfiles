@@ -1,7 +1,7 @@
 # Profile file. Runs on login. Environmental variables are set here.
 
 # Default programs:
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="google-chrome-stable"
 

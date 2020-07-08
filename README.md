@@ -2,9 +2,11 @@
     <h1>Rainbow Dotfiles</h1>
 </div>
 
-![Screenshot](./screenshot.png)
+![Screenshot-1](./screenshot-polybar.png)
+![Screenshot-2](./screenshot-bumblebee-status.png)
 
 ## Details
+
 - OS: Arch Linux x86_64
 - Shell: zsh
 - WM: i3

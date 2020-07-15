@@ -14,4 +14,4 @@
 - Theme: Arc [GTK2/3]
 - Icons: Papirus [GTK2/3]
 - System Font: Noto Sans
-- Terminal Font: Source Code Pro (Nerd Patched)
+- Terminal Font: Droid Sans Mono (Nerd Patched)

@@ -10,6 +10,7 @@ astyle
 atool
 autopep8
 base-devel
+bumblebee-status-git
 blueman
 cava
 clang
@@ -40,7 +41,7 @@ gnome-screenshot
 gnuplot
 google-chrome
 grub2-theme-arch-leap
-gvim
+neovim
 highlight
 htop
 i3-gaps

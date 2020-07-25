@@ -203,11 +203,11 @@ bindsym $mod+m gaps inner all minus 5
 bindsym $mod+Shift+m gaps outer all minus 5
 
 bindsym $mod+n exec --no-startup-id netease-cloud-music
+
 bindsym $mod+o exec --no-startup-id libreoffice
+bindsym $mod+Shift+o exec --no-startup-id i3-input -F 'exec trans -b -t chinese "%s" | xargs notify-send' -P 'Input a word: '
 
 bindsym $mod+p gaps inner all plus 5
-
-# dropdown terminal
 bindsym $mod+Shift+p gaps outer all plus 5
 
 bindsym $mod+q kill

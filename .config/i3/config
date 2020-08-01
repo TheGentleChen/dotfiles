@@ -3,10 +3,9 @@
 #============ | | |_ \   / __/ _ \| '_ \| |_  ============#
 #============ | |___) | | (_| (_) | | | |  _| ============#
 #============ |_|____/   \___\___/|_| |_|_|   ============#
-#           This file originally by Rainbow Chen.         #
-#
+#          *This file originally by Rainbow Chen.*        #
+
 # i3 config file (v4)
-#
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
@@ -62,10 +61,10 @@ exec_always --no-startup-id "compton -b --config ~/.config/compton.conf"
 # desktop backgroud
 exec_always --no-startup-id "feh -q --bg-fill ~/Pictures/background.jpg"
 # exec_always --no-startup-id "dwall -animecity"
-# input method framework for sougoupinin
-exec_always --no-startup-id fcitx
+# input method framework for pinin
+exec_always --no-startup-id "ibus-daemon -drx"
 # you know, lol
-exec_always --no-startup-id qv2ray
+exec_always --no-startup-id electron-ssr
 # network managerment
 exec_always --no-startup-id nm-applet
 # status bar
@@ -122,8 +121,8 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff $yellow   $bright_blue
-client.focused_inactive #333333 #5f676a #ffffff #44e50   $bright_black
+client.focused          #4c7899 #285577 #ffffff $yellow   $bright_cyan
+client.focused_inactive #333333 #5f676a #ffffff #44e50e   $bright_black
 client.unfocused        #333333 #222222 #888888 #292d2e   $bright_black
 client.urgent           #2f343a #900000 #ffffff #900000   $bright_red
 client.placeholder      #000000 #0c0c0c #ffffff #000000   $cyan
@@ -137,19 +136,15 @@ client.background       $background
 # bindsym $mod+F4 exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Pictures/landscape_high_resolution.jpg"
 bindsym $mod+F4 exec --no-startup-id "i3lock -i ~/Pictures/i3lock.png"
 
-# start a app
+# start a terminal
 bindsym $mod+Return split horizontal; exec --no-startup-id $terminal;
 bindsym $mod+Shift+Return split vertical; exec --no-startup-id $terminal;
 bindsym $mod+Ctrl+Return exec --no-startup-id $script/alacritty_samedir.sh
 
+# start the filemanager -- ranger
 bindsym $mod+semicolon exec --no-startup-id "$terminal -e ranger"
-# bindsym $mod+Shift+semicolon exec --no-startup-id nautilus
-
-bindsym $mod+bracketleft workspace prev
-bindsym $mod+Shift+bracketleft move container to workspace prev
-
-bindsym $mod+bracketright workspace next
-bindsym $mod+Shift+bracketright move container to workspace next
+# start the rss reader -- newsboat
+bindsym $mod+Shift+semicolon exec --no-startup-id "$terminal -e newsboat"
 
 # focus the parent/child container
 bindsym $mod+backslash focus parent
@@ -166,7 +161,6 @@ bindsym $mod+Shift+a exec --no-startup-id flameshot gui
 bindsym $mod+c exec $browser
 # reload the configuration file
 bindsym $mod+Shift+c reload
-
 
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+Shift+d gaps inner all set $inner_gaps; gaps outer all set $outer_gaps
@@ -332,5 +326,5 @@ bar {
 	memory battery-upower pasink pasource datetime \
 	-p interval=1 root.path=/ disk.format="{used}/{size}" \
 	battery.device=CMB0 nic.format="{intf} {ip} {ssid}" memory.format="{percent:05.02f}%" \
-	-t onedark-powerline
+	-t iceberg
 }

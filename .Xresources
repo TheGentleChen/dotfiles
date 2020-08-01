@@ -18,6 +18,84 @@
 ! *.color7:     #ABB2BF
 ! *.color15:    #CCCCCC
 
+! from https://github.com/rajshekhar26/dotfiles/blob/master/.config/colorschemes/faint_light
+! special
+! wall: #E1E1DD
+! *.foreground:   #6f798c
+! *.background:   #fcfcfc
+! *.cursorColor:  #6f798c
+
+! black
+! *.color8:       #A7ACB3
+! *.color0:       #fcfcfc
+
+! red
+! *.color9:       #B86974
+! *.color1:       #B86974
+
+! green
+! *.color10:      #469E76
+! *.color2:       #469E76
+
+! yellow
+! *.color11:      #C7A775
+! *.color3:       #C7A775
+
+! blue
+! *.color12:      #5287AD
+! *.color4:       #5287AD
+
+! magenta
+! *.color13:      #CC6D8B
+! *.color5:       #CC6D8B
+
+! cyan
+! *.color14:      #3C97AD
+! *.color6:       #3C97AD
+
+! white
+! *.color15:      #6f798c
+! *.color7:       #A7ACB3
+
+! from https://github.com/rajshekhar26/dotfiles/blob/master/.config/colorschemes/faint
+! special
+! wall: #2F3542
+! *.foreground:   #9faab8
+! *.background:   #232731
+! *.cursorColor:  #9faab8
+
+! black
+! *.color0:       #232731
+! *.color8:       #6f798c
+
+! red
+! *.color1:       #a65f69
+! *.color9:       #B86974
+
+! green
+! *.color2:       #3b8563
+! *.color10:      #469E76
+
+! yellow
+! *.color3:       #b39669
+! *.color11:      #C7A775
+
+! blue
+! *.color4:       #487799
+! *.color12:      #5287AD
+
+! magenta
+! *.color5:       #b9637e
+! *.color13:      #CC6D8B
+
+! cyan
+! *.color6:       #348396
+! *.color14:      #3C97AD
+
+! white
+! *.color7:       #6f798c
+! *.color15:      #9faab8
+
 !color from unixporn
 !ref: https://www.reddit.com/r/unixporn/comments/hjzw5f/oc_qualitative_color_palette_for_ansi_terminal/
 *.foreground:   #C0C0C0

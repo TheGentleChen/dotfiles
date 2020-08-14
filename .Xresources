@@ -60,67 +60,105 @@
 ! from https://github.com/rajshekhar26/dotfiles/blob/master/.config/colorschemes/faint
 ! special
 ! wall: #2F3542
-! *.foreground:   #9faab8
-! *.background:   #232731
-! *.cursorColor:  #9faab8
+*.foreground:   #9faab8
+*.background:   #232731
+*.cursorColor:  #9faab8
 
 ! black
-! *.color0:       #232731
-! *.color8:       #6f798c
+*.color0:       #232731
+*.color8:       #6f798c
 
 ! red
-! *.color1:       #a65f69
-! *.color9:       #B86974
+*.color1:       #a65f69
+*.color9:       #B86974
 
 ! green
-! *.color2:       #3b8563
-! *.color10:      #469E76
+*.color2:       #3b8563
+*.color10:      #469E76
 
 ! yellow
-! *.color3:       #b39669
-! *.color11:      #C7A775
+*.color3:       #b39669
+*.color11:      #C7A775
 
 ! blue
-! *.color4:       #487799
-! *.color12:      #5287AD
+*.color4:       #487799
+*.color12:      #5287AD
 
 ! magenta
-! *.color5:       #b9637e
-! *.color13:      #CC6D8B
+*.color5:       #b9637e
+*.color13:      #CC6D8B
 
 ! cyan
-! *.color6:       #348396
-! *.color14:      #3C97AD
+*.color6:       #348396
+*.color14:      #3C97AD
 
 ! white
-! *.color7:       #6f798c
-! *.color15:      #9faab8
+*.color7:       #6f798c
+*.color15:      #9faab8
 
-!color from unixporn
-!ref: https://www.reddit.com/r/unixporn/comments/hjzw5f/oc_qualitative_color_palette_for_ansi_terminal/
-*.foreground:   #C0C0C0
-*.background:   #101010
+! from reddit - https://www.reddit.com/r/unixporn/comments/i2e8cx/bspwm_stairway_to_heaven/
+! special
+! *.foreground:   #f2f2f4
+! *.background:   #2f3842
+! *.cursorColor:  #f2f2f4
+
+! black
+! *.color0:       #2f3842
+! *.color8:       #6A777E
+
+! red
+! *.color1:       #ec866f
+! *.color9:       #ec866f
+
+! green
+! *.color2:       #96bb7f
+! *.color10:      #96bb7f
+
+! yellow
+! *.color3:       #ECC46F
+! *.color11:      #ECC46F
+
+! blue
+! *.color4:       #6f97ec
+! *.color12:      #6f97ec
+
+! magenta
+! *.color5:       #ec816f
+! *.color13:      #ec816f
+
+! cyan
+! *.color6:       #6fd5ec
+! *.color14:      #6fd5ec
+
+! white
+! *.color7:       #6A777E
+! *.color15:      #f2f2f4
+
+! color from unixporn
+! ref: https://www.reddit.com/r/unixporn/comments/hjzw5f/oc_qualitative_color_palette_for_ansi_terminal/
+! *.foreground:   #C0C0C0
+! *.background:   #101010
 ! black/dark-gray
-*.color0:       #101010
-*.color8:       #454545
+! *.color0:       #101010
+! *.color8:       #454545
 ! red/orange
-*.color1:       #EFA6A2
-*.color9:       #E0AF85
+! *.color1:       #EFA6A2
+! *.color9:       #E0AF85
 ! green/aquamarine
-*.color2:       #80C990
-*.color10:      #5ACCAF
+! *.color2:       #80C990
+! *.color10:      #5ACCAF
 ! amber/yellow
-*.color3:       #A69460
-*.color11:      #C8C874
+! *.color3:       #A69460
+! *.color11:      #C8C874
 ! blue/violet
-*.color4:       #A3B8EF
-*.color12:      #CCACED
+! *.color4:       #A3B8EF
+! *.color12:      #CCACED
 ! magenta/rose
-*.color5:       #E6A3DC
-*.color13:      #F2A1C2
+! *.color5:       #E6A3DC
+! *.color13:      #F2A1C2
 ! cyan/azure
-*.color6:       #50CACD
-*.color14:      #74C3E4
+! *.color6:       #50CACD
+! *.color14:      #74C3E4
 ! gray/white
-*.color7:       #808080
-*.color15:      #C0C0C0
+! *.color7:       #808080
+! *.color15:      #C0C0C0

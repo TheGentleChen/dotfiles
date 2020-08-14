@@ -1,4 +1,5 @@
 #!/bin/bash
+# Open polybar in only screen
 
 # Terminate already running bar instances
 killall -q polybar

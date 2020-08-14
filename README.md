@@ -2,8 +2,7 @@
     <h1>Rainbow Dotfiles</h1>
 </div>
 
-![Screenshot-1](./screenshot-polybar.png)
-![Screenshot-2](./screenshot-bumblebee-status.png)
+![Screenshot-1](./screenshot-bumblebee-status.png)
 
 ## Details
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
+# Open polybar in mult-screens
+
 (
   flock 200
 

@@ -72,7 +72,7 @@ exec_always --no-startup-id nm-applet
 # power managerment
 exec_always --no-startup-id xfce4-power-manager
 # bluetooth managerment
-# exec_always --no-startup-id blueman-applet
+exec_always --no-startup-id blueman-applet
 # color temperature adjustment
 # exec_always --no-startup-id redshift
 # keycode custom
@@ -121,11 +121,11 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff $yellow   $bright_cyan
-client.focused_inactive #333333 #5f676a #ffffff #44e50e   $bright_black
-client.unfocused        #333333 #222222 #888888 #292d2e   $bright_black
-client.urgent           #2f343a #900000 #ffffff #900000   $bright_red
-client.placeholder      #000000 #0c0c0c #ffffff #000000   $cyan
+client.focused          #4c7899 #285577 #ffffff $yellow   $red
+client.focused_inactive #333333 #5f676a #ffffff #44e50e
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #2f343a #900000 #ffffff #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       $background
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -134,7 +134,7 @@ client.background       $background
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # bindsym $mod+F4 exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/Pictures/landscape_high_resolution.jpg"
-bindsym $mod+F4 exec --no-startup-id "i3lock -i ~/Pictures/i3lock.png"
+bindsym $mod+F4 exec --no-startup-id $script/i3lock.sh
 
 # start a terminal
 bindsym $mod+Return split horizontal; exec --no-startup-id $terminal;
@@ -312,7 +312,7 @@ bindsym XF86Mail exec "$browser https://mail.163.com"
 bindsym XF86Search exec $browser
 bindsym XF86HomePage exec "$browser https://github.com/rainbowhxch"
 bindsym XF86Calculator exec "$terminal -c python"
-bindsym XF86Launch5 exec --no-startup-id "i3lock -i ~/Pictures/i3lock.png"
+bindsym XF86Launch5 exec --no-startup-id $script/i3lock.sh
 bindsym XF86Launch6 exec --no-startup-id xbacklight -inc 10
 bindsym XF86Launch7 exec --no-startup-id xbacklight -dec 10
 

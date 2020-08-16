@@ -162,3 +162,59 @@
 ! gray/white
 ! *.color7:       #808080
 ! *.color15:      #C0C0C0
+
+! urxvt configuration
+URxvt.colorUL: #4682B4
+URxvt.scrollBar: false
+URxvt.transparent: true
+URxvt.shading: 160
+URxvt.font: xft:DroidSansMono Nerd Font:size=16
+
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+URxvt.perl-ext-common: default,clipboard,url-select,resize-font
+URxvt.keysym.C-c: perl:clipboard:copy
+URxvt.keysym.C-v: perl:clipboard:paste
+URxvt.keysym.C-j: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/google-chrome-stable
+URxvt.url-select.underline: true
+URxvt.keysym.C--: resize-font:smaller
+URxvt.keysym.C-=: resize-font:bigger
+
+URxvt.foreground:   #9faab8
+URxvt.background:   #232731
+URxvt.cursorColor:  #9faab8
+
+! black
+URxvt.color0:       #232731
+URxvt.color8:       #6f798c
+
+! red
+URxvt.color1:       #a65f69
+URxvt.color9:       #B86974
+
+! green
+URxvt.color2:       #3b8563
+URxvt.color10:      #469E76
+
+! yellow
+URxvt.color3:       #b39669
+URxvt.color11:      #C7A775
+
+! blue
+URxvt.color4:       #487799
+URxvt.color12:      #5287AD
+
+! magenta
+URxvt.color5:       #b9637e
+URxvt.color13:      #CC6D8B
+
+! cyan
+URxvt.color6:       #348396
+URxvt.color14:      #3C97AD
+
+! white
+URxvt.color7:       #6f798c
+URxvt.color15:      #9faab8

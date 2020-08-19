@@ -119,8 +119,8 @@ alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 alias ssh="env TERM=xterm-256color ssh"
 alias pc="proxychains4"
-alias proxyon="export http_proxy=127.0.0.1:1080"
-alias proxyoff="unset http_proxy"
+alias proxyon="export http_proxy=http://127.0.0.1:1080 https_proxy=$http_proxy"
+alias proxyoff="unset http_proxy https_proxy"
 alias sl="sl | lolcat"
 alias trs="trans"
 alias ts="trans -shell"
@@ -148,25 +148,25 @@ bindkey -M vicmd '^j' vi-beginning-of-line
 bindkey -M vicmd '^l' vi-end-of-line
 
 # Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+# function zle-keymap-select {
+  # if [[ ${KEYMAP} == vicmd ]] ||
+     # [[ $1 = 'block' ]]; then
+    # echo -ne '\e[1 q'
+  # elif [[ ${KEYMAP} == main ]] ||
+       # [[ ${KEYMAP} == viins ]] ||
+       # [[ ${KEYMAP} = '' ]] ||
+       # [[ $1 = 'beam' ]]; then
+    # echo -ne '\e[5 q'
+  # fi
+# }
+# zle -N zle-keymap-select
+# zle-line-init() {
+    # zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    # echo -ne "\e[5 q"
+# }
+# zle -N zle-line-init
+# echo -ne '\e[5 q' # Use beam shape cursor on startup.
+# preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

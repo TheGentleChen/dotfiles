@@ -198,7 +198,7 @@ bindsym $mod+Shift+m gaps outer all minus 5
 
 bindsym $mod+n exec --no-startup-id netease-cloud-music
 
-bindsym $mod+o exec --no-startup-id libreoffice
+bindsym $mod+o exec --no-startup-id wps
 bindsym $mod+Shift+o exec --no-startup-id i3-input -F 'exec trans -b -t chinese "%s" | xargs notify-send' -P 'Input a word: '
 
 bindsym $mod+p gaps inner all plus 5
@@ -325,6 +325,6 @@ bar {
     status_command /usr/bin/bumblebee-status -m mpd nic disk:root cpu \
 	memory battery-upower pasink pasource datetime \
 	-p interval=1 root.path=/ disk.format="{used}/{size}" \
-	battery.device=CMB0 nic.format="{intf} {ip} {ssid}" memory.format="{percent:05.02f}%" \
+	battery.device=CMB0 nic.format="{intf} {ip}" memory.format="{percent:05.02f}%" \
 	-t iceberg
 }

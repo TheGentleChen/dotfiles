@@ -144,6 +144,8 @@ bindkey -M vicmd 'k' vi-down-line-or-history
 bindkey -M vicmd 'J' vi-backward-word
 bindkey -M vicmd 'L' vi-forward-word
 bindkey -M vicmd 'm' vi-insert
+bindkey -M vicmd 'M' vi-insert-bol
+bindkey -M vicmd 's' vi-swap-case
 bindkey -M vicmd '^j' vi-beginning-of-line
 bindkey -M vicmd '^l' vi-end-of-line
 

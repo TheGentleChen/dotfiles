@@ -2,7 +2,7 @@
 
 # Default programs:
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export BROWSER="google-chrome-stable"
 
 # Other Paths

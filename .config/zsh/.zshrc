@@ -132,6 +132,7 @@ alias gcc="gcc -std=c11 -g -Wall"
 alias "clang++"="clang++ -std=c++2a -g -Wall"
 alias clang="clang -std=c11 -g -Wall"
 alias getport="ss -plat"
+alias gi="lazygit"
 
 # key for completion
 bindkey '^ ' autosuggest-accept

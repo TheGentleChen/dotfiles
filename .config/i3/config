@@ -104,11 +104,11 @@ for_window [class="netease-cloud-music"] floating enable
 for_window [class="netease-cloud-music"] border none
 
 # dropdown terminal
-for_window [instance="Dropdown" class="Alacritty"] floating enable
-for_window [instance="Dropdown" class="Alacritty"] move position center
-for_window [instance="Dropdown" class="Alacritty"] resize set 800 500
-for_window [instance="Dropdown" class="Alacritty"] move scratchpad
-exec --no-startup-id $terminal --class="Dropdown"
+for_window [instance="Dropdown" class="st-256color"] floating enable
+for_window [instance="Dropdown" class="st-256color"] move position center
+for_window [instance="Dropdown" class="st-256color"] resize set 800 500
+for_window [instance="Dropdown" class="st-256color"] move scratchpad
+exec --no-startup-id $terminal -n "Dropdown"
 
 # enable floating for Wine App
 for_window [class="Wine"] floating enable
@@ -210,7 +210,7 @@ bindsym $mod+Shift+q exec qtcreator
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-bindsym $mod+s [instance="Dropdown" class="Alacritty"] scratchpad show; move position center
+bindsym $mod+s [instance="Dropdown" class="st-256color"] scratchpad show; move position center
 bindsym $mod+Shift+s [class="Wine"] move scratchpad
 
 bindsym $mod+t exec $script/tim.sh
@@ -311,7 +311,7 @@ bindsym XF86Tools exec --no-startup-id $script/touchpad_toggle.sh
 bindsym XF86Mail exec "$browser https://mail.163.com"
 bindsym XF86Search exec $browser
 bindsym XF86HomePage exec "$browser https://github.com/rainbowhxch"
-bindsym XF86Calculator exec "$terminal -c python"
+bindsym XF86Calculator exec "$terminal -e python"
 bindsym XF86Launch5 exec --no-startup-id $script/i3lock.sh
 bindsym XF86Launch6 exec --no-startup-id xbacklight -inc 10
 bindsym XF86Launch7 exec --no-startup-id xbacklight -dec 10

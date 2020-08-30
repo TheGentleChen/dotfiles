@@ -76,7 +76,7 @@ keybinding:
     commitchangeswitheditor: C
     commitchangeswithouthook: w
     fetch: f
-    ignorefile: I
+    ignorefile: <c-i>
     refreshfiles: r
     stashallchanges: s
     togglestagedall: a

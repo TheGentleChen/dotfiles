@@ -9,7 +9,7 @@
 - OS: Arch Linux x86_64
 - Shell: zsh
 - WM: i3
-- Terminal: alacritty
+- Terminal: [st](https://www.github.com/rainbowhxch/st)
 - Theme: Arc [GTK2/3]
 - Icons: Papirus [GTK2/3]
 - System Font: Noto Sans

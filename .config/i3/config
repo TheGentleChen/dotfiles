@@ -81,6 +81,8 @@ exec_always --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
 exec_always --no-startup-id xsettingsd
 # Music Player Daemon
 exec_always --no-startup-id mpd
+# Translation app
+exec_always --no-startup-id crow
 
 # horizontal|vertical|auto
 default_orientation horizontal
@@ -155,8 +157,11 @@ bindsym $mod+space focus mode_toggle
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
+# bindsym $mod+a exec --no-startup-id "scrot -q 100 ~/Pictures/screenshot-%Y-%m-%d_%H-%M-%S.jpg"
+# bindsym $mod+Shift+a exec --no-startup-id "scrot -s -f -l style=solid,width=2,color="red" -q 100 ~/Pictures/screenshot-%Y-%m-%d_%H-%M-%S.jpg"
 bindsym $mod+a exec --no-startup-id $script/gnome-screenshot.sh
 bindsym $mod+Shift+a exec --no-startup-id flameshot gui
+bindsym $mod+Ctrl+a exec --no-startup-id arandr
 
 bindsym $mod+c exec --no-startup-id $browser
 # reload the configuration file
@@ -212,7 +217,7 @@ bindsym $mod+Shift+r restart
 
 bindsym $mod+s [instance="Dropdown" class="st-256color"] scratchpad show; move position center
 bindsym $mod+Shift+s [class="Wine"] move scratchpad
-# bindsym $mod+Ctrl+s exec --no-startup-id pavucontrol
+bindsym $mod+Ctrl+s exec --no-startup-id pavucontrol
 
 bindsym $mod+t exec --no-startup-id $script/tim.sh
 bindsym $mod+Shift+t [class="Wine" instance="tim.exe"] scratchpad show

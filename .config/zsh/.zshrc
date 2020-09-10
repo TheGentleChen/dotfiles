@@ -112,6 +112,8 @@ alias c="clear"
 alias s="neofetch | lolcat"
 alias r="ranger"
 alias v="nvim"
+alias mkdir="mkdir -pv"
+alias hl="highlight --out-format=ansi"
 alias sudo="sudo -E"
 alias du="du -h"
 alias df="df -h"
@@ -133,6 +135,8 @@ alias "clang++"="clang++ -std=c++2a -g -Wall"
 alias clang="clang -std=c11 -g -Wall"
 alias getport="ss -plat"
 alias gi="lazygit"
+alias ydv="youtube-dl --add-metadata"
+alias yda="youtube-dl --add-metadata -x"
 
 # key for completion
 bindkey '^ ' autosuggest-accept

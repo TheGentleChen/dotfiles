@@ -127,9 +127,9 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff $yellow   $bright_blue
+client.focused          #4c7899 #285577 #ffffff $yellow   $cyan
 client.focused_inactive #333333 #5f676a #ffffff #44e50e
-client.unfocused        #333333 #222222 #888888 #292d2e
+client.unfocused        #bright_white #222222 #888888 #292d2e
 client.urgent           #2f343a #900000 #ffffff #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       $background
@@ -177,6 +177,7 @@ bindsym $mod+Shift+d gaps inner all set $inner_gaps; gaps outer all set $outer_g
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+e layout toggle tabbed stacking split
+bindsym $mod+Ctrl+e exec --no-startup-id $script/dmenu-emoji.sh
 
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
@@ -222,11 +223,11 @@ bindsym $mod+Shift+q exec --no-startup-id qtcreator
 bindsym $mod+Shift+r restart
 
 bindsym $mod+s [instance="Dropdown" class="st-256color"] scratchpad show; move position center
-bindsym $mod+Shift+s [class="Qq"] move scratchpad
+bindsym $mod+Shift+s [class="Wine"] move scratchpad
 bindsym $mod+Ctrl+s exec --no-startup-id pavucontrol
 
-bindsym $mod+t exec --no-startup-id qq
-bindsym $mod+Shift+t [class="Qq" instance="qq"] scratchpad show
+bindsym $mod+t exec --no-startup-id $script/tim.sh
+bindsym $mod+Shift+t [class="Wine" instance="tim.exe"] scratchpad show
 
 # split in vertical orientation
 bindsym $mod+v splitv

@@ -24,7 +24,7 @@ map [normal] <Space> scroll full-down
 map [normal] <S-Space> scroll full-up
 map [normal] h scroll page-top
 map [normal] b scroll page-bottom
-map [normal] <C-j> jumplist backwark
+map [normal] <C-j> jumplist backward
 map [normal] <C-l> jumplist forward
 map [normal] r rotate rotate-cw
 map [normal] R rotate rotate-ccw
@@ -42,6 +42,7 @@ map [normal] M toggle_inputbar
 map [normal] S toggle_statusbar
 map [normal] [ zoom in
 map [normal] ] zoom out
+map [normal] <TAB> toggle_index
 unmap [normal] q
 
 # index mode
@@ -51,4 +52,4 @@ map [index] j navigate_index expand
 map [index] l navigate_index collapse
 map [index] J navigate_index expand-all
 map [index] L navigate_index collapse-all
-map [index] <Tab> change_mode normal
+unmap [index] q

@@ -56,18 +56,12 @@ font pango:Source Code Pro 10
 exec_always --no-startup-id amixer sset Capture nocap
 # compositor
 exec_always --no-startup-id "compton -b --config ~/.config/compton.conf"
-# desktop backgroud
-exec_always --no-startup-id "feh -q --bg-fill ~/Pictures/background.jpg"
 # input method framework for pinin
 exec_always --no-startup-id "ibus-daemon -drx"
-# display
-exec_always --no-startup-id $script/mutidisplay.sh
 # you know, lol
 exec_always --no-startup-id qv2ray
 # network managerment
 exec_always --no-startup-id nm-applet
-# status bar
-exec_always --no-startup-id $script/polybar-multscreen.sh
 # power managerment
 exec_always --no-startup-id xfce4-power-manager
 # bluetooth managerment
@@ -82,6 +76,8 @@ exec_always --no-startup-id mpd
 exec_always --no-startup-id crow
 # clipboard managerment
 exec_always --no-startup-id clipmenud
+# status bar
+exec_always --no-startup-id $script/polybar-multscreen.sh
 
 # horizontal|vertical|auto
 default_orientation horizontal
@@ -124,12 +120,12 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #285577 #ffffff $yellow   $cyan
-client.focused_inactive #333333 #5f676a #ffffff #44e50e
-client.unfocused        #bright_white #222222 #888888 #292d2e
-client.urgent           #2f343a #900000 #ffffff #900000
-client.placeholder      #000000 #0c0c0c #ffffff #000000
-client.background       $background
+client.focused          #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.focused_inactive #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.unfocused        #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.urgent           #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.placeholder      #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.background       #2f343f #2f343f #2f343f #2f343f   #2f343f
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -148,6 +144,9 @@ bindsym $mod+Ctrl+Return exec --no-startup-id $script/alacritty_samedir.sh
 bindsym $mod+semicolon exec --no-startup-id "$terminal -e ranger"
 # start the rss reader -- newsboat
 bindsym $mod+Shift+semicolon exec --no-startup-id "$terminal -e newsboat"
+
+bindsym $mod+comma exec --no-startup-id $script/video_client.sh "bilibili"
+bindsym $mod+Shift+comma exec --no-startup-id $script/video_client.sh "tencent-video"
 
 # focus the parent/child container
 bindsym $mod+backslash focus parent

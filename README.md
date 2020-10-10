@@ -32,3 +32,6 @@ mv dotfiles .config
 ### From 0 to 1
 
 Please check my auto-rice bootstrapping script -- [RainbowCh's LARBS](https://github.com/rainbowhxch/LARBS).
+
+## License
+GPL-3.0

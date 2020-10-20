@@ -18,6 +18,7 @@
   tray_output=eDP1
 
   if [[ $outputs_cnt == 2 ]]; then
+      xrandr --output HDMI1 --auto
       xrandr --output HDMI1 --left-of eDP1
       xrandr --output HDMI1 --primary
       tray_output=HDMI1

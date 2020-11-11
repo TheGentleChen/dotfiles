@@ -17,11 +17,14 @@
 
   tray_output=eDP1
 
+  feh -q --bg-fill ~/Pictures/background.jpg
+
   if [[ $outputs_cnt == 2 ]]; then
       xrandr --output HDMI1 --auto
       xrandr --output HDMI1 --left-of eDP1
       xrandr --output HDMI1 --primary
       tray_output=HDMI1
+      feh -q --bg-fill ~/Pictures/background.jpg ~/Pictures/background2.jpg
   fi
 
   for m in $outputs; do
@@ -35,5 +38,3 @@
     disown
   done
 ) 200>/var/tmp/polybar-launch.lock
-
-feh -q --bg-fill ~/Pictures/background.jpg

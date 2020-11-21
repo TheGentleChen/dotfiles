@@ -60,7 +60,7 @@ exec_always --no-startup-id "compton -b --config ~/.config/compton.conf"
 exec_always --no-startup-id "ibus-daemon -drx"
 # you know, lol
 exec_always --no-startup-id qv2ray
-exec_always --no-startup-id electron-clash
+# exec_always --no-startup-id electron-clash
 # network managerment
 exec_always --no-startup-id nm-applet
 # power managerment
@@ -74,7 +74,7 @@ exec_always --no-startup-id xsettingsd
 # Music Player Daemon
 exec_always --no-startup-id mpd
 # Translation app
-exec_always --no-startup-id crow
+# exec_always --no-startup-id crow
 # clipboard managerment
 exec_always --no-startup-id clipmenud
 # status bar

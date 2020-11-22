@@ -55,7 +55,7 @@ font pango:Source Code Pro 10
 # always mute microphone at startup
 exec_always --no-startup-id amixer sset Capture nocap
 # compositor
-exec_always --no-startup-id "compton -b --config ~/.config/compton.conf"
+exec_always --no-startup-id "picom -b"
 # input method framework for pinin
 exec_always --no-startup-id "ibus-daemon -drx"
 # you know, lol

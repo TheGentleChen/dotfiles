@@ -2,8 +2,10 @@ set adjust-open width
 set window-title-basename "true"
 set selection-clipboard clipboard
 set font "NimbusSans Regular 10"
+set default-fg "#000000"
+set default-bg "#F0E68C"
 set statusbar-fg "#000000"
-set statusbar-bg "#C2BFA5"
+set statusbar-bg "#a2BFA5"
 set inputbar-fg "#FFFFFF"
 set inputbar-bg "#333333"
 set completion-highlight-fg "#F0E68C"
@@ -24,8 +26,8 @@ map [normal] <Space> scroll full-down
 map [normal] <S-Space> scroll full-up
 map [normal] h scroll page-top
 map [normal] b scroll page-bottom
-map [normal] <C-j> jumplist backward
-map [normal] <C-l> jumplist forward
+map [normal] <C-o> jumplist backward
+map [normal] <C-u> jumplist forward
 map [normal] r rotate rotate-cw
 map [normal] R rotate rotate-ccw
 map [normal] <C-r> reload
@@ -40,8 +42,8 @@ map [normal] p change_mode presentation
 map [normal] <C-f> toggle_fullscreen
 map [normal] M toggle_inputbar
 map [normal] S toggle_statusbar
-map [normal] [ zoom in
-map [normal] ] zoom out
+map [normal] ] zoom in
+map [normal] [ zoom out
 map [normal] <TAB> toggle_index
 unmap [normal] q
 

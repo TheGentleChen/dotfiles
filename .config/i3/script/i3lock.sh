@@ -4,6 +4,6 @@
 
 scrot -o -q 100 /tmp/i3lock.png || exit 0
 
-convert /tmp/i3lock.png -paint 2 -swirl 270 ~/Pictures/stuffs/lock.png -gravity center -composite /tmp/i3lock.png || exit 0
+convert /tmp/i3lock.png -paint 3 -swirl 270 ~/Pictures/stuffs/lock.png -gravity center -composite /tmp/i3lock.png || exit 0
 
 i3lock -e -i /tmp/i3lock.png || exit 0

@@ -16,7 +16,7 @@ export ZSH="/home/ch/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME="dracula"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # DRACULA_DISPLAY_TIME=1
 DRACULA_DISPLAY_CONTEXT=1
 DRACULA_ARROW_ICON="@"

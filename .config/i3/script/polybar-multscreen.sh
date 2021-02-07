@@ -15,16 +15,15 @@
       outputs_cnt=$(expr $outputs_cnt + 1)
   done
 
-  tray_output=eDP1
+  tray_output=eDP-1
 
   feh -q --bg-fill ~/Pictures/background.jpg
+  xrandr --output eDP-1 --primary
 
   if [[ $outputs_cnt == 2 ]]; then
-      xrandr --output HDMI1 --auto
-      xrandr --output HDMI1 --left-of eDP1
-      xrandr --output HDMI1 --primary
-      tray_output=HDMI1
+      xrandr --output HDMI-1 --auto --left-of eDP-1
       feh -q --bg-fill ~/Pictures/background.jpg ~/Pictures/background2.jpg
+      tray_output=HDMI-1
   fi
 
   for m in $outputs; do

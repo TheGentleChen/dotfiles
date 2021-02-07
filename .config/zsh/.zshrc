@@ -15,11 +15,7 @@ export ZSH="/home/ch/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-# DRACULA_DISPLAY_TIME=1
-DRACULA_DISPLAY_CONTEXT=1
-DRACULA_ARROW_ICON="@"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,6 +78,7 @@ DRACULA_ARROW_ICON="@"
 plugins=(git systemd vi-mode zsh-completions zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.config/zsh/.zprofile
 
 # User configuration
 
@@ -170,6 +167,9 @@ bindkey -M vicmd '^l' vi-end-of-line
 # zle -N zle-line-init
 # echo -ne '\e[5 q' # Use beam shape cursor on startup.
 # preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

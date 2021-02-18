@@ -1,0 +1,53 @@
+# Rainbow Chen's configuration file for i3blocks.
+
+markup=pango
+separator=true
+separator_block_width=10
+align=center
+color=#282828
+command=~/.config/i3blocks/$name
+
+[mediaplayer]
+instance=mpd
+label= 
+interval=once
+background=#8ec07c
+signal=10
+
+[cpu_usage]
+label= 
+interval=10
+background=#cc241d
+
+[memory]
+label= 
+interval=30
+background=#98971a
+
+[disk]
+label= 
+instance=/
+interval=30
+background=#d79921
+
+[battery]
+label= 
+interval=10
+background=#458588
+
+[volume]
+label= 
+interval=once
+background=#689d6a
+signal=10
+
+[wifi]
+instance=wlp0s20f3
+interval=10
+label= 
+background=#b16286
+
+[date]
+interval=1
+label= 
+background=#a89984

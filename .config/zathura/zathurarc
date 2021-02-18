@@ -1,30 +1,58 @@
 set adjust-open width
 set window-title-basename "true"
 set selection-clipboard clipboard
-set font "NimbusSans Regular 10"
-set default-fg "#000000"
-set default-bg "#F0E68C"
-set statusbar-fg "#000000"
-set statusbar-bg "#a2BFA5"
-set inputbar-fg "#FFFFFF"
-set inputbar-bg "#333333"
-set completion-highlight-fg "#F0E68C"
-set completion-highlight-bg "#6B8E23"
-# set highlight-color "#CD853F"
-# set highlight-active-color "#F0E68C"
-set notification-fg "#FFFFFF"
-set notification-bg "#333333"
+set font "JetBrainsMono Nerd Fort 10"
+set notification-error-bg       "#282828" # bg
+set notification-error-fg       "#fb4934" # bright:red
+set notification-warning-bg     "#282828" # bg
+set notification-warning-fg     "#fabd2f" # bright:yellow
+set notification-bg             "#282828" # bg
+set notification-fg             "#b8bb26" # bright:green
+
+set completion-bg               "#504945" # bg2
+set completion-fg               "#ebdbb2" # fg
+set completion-group-bg         "#3c3836" # bg1
+set completion-group-fg         "#928374" # gray
+set completion-highlight-bg     "#83a598" # bright:blue
+set completion-highlight-fg     "#504945" # bg2
+
+# Define the color in index mode
+set index-bg                    "#504945" # bg2
+set index-fg                    "#ebdbb2" # fg
+set index-active-bg             "#83a598" # bright:blue
+set index-active-fg             "#504945" # bg2
+
+set inputbar-bg                 "#282828" # bg
+set inputbar-fg                 "#ebdbb2" # fg
+
+set statusbar-bg                "#504945" # bg2
+set statusbar-fg                "#ebdbb2" # fg
+
+set highlight-color             "#fabd2f" # bright:yellow
+set highlight-active-color      "#fe8019" # bright:orange
+
+set default-bg                  "#282828" # bg
+set default-fg                  "#ebdbb2" # fg
+set render-loading              true
+set render-loading-bg           "#282828" # bg
+set render-loading-fg           "#ebdbb2" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#282828" # bg
+set recolor-darkcolor           "#ebdbb2" # fg
+set recolor                     "true"
+# set recolor-keephue             true      # keep original color
 
 # normal mode
-map [normal] k scroll down
-map [normal] i scroll up
-map [normal] j scroll left
+map [normal] j scroll down
+map [normal] k scroll up
+map [normal] h scroll left
 map [normal] l scroll right
-map [normal] K scroll half-down
-map [normal] I scroll half-up
+map [normal] J scroll half-down
+map [normal] K scroll half-up
 map [normal] <Space> scroll full-down
 map [normal] <S-Space> scroll full-up
-map [normal] h scroll page-top
+map [normal] t scroll page-top
 map [normal] b scroll page-bottom
 map [normal] <C-o> jumplist backward
 map [normal] <C-u> jumplist forward
@@ -48,10 +76,10 @@ map [normal] <TAB> toggle_index
 unmap [normal] q
 
 # index mode
-map [index] k navigate_index down
-map [index] i navigate_index up
-map [index] j navigate_index expand
+map [index] j navigate_index down
+map [index] k navigate_index up
+map [index] h navigate_index expand
 map [index] l navigate_index collapse
-map [index] J navigate_index expand-all
-map [index] L navigate_index collapse-all
+map [index] i navigate_index expand-all
+map [index] ; navigate_index collapse-all
 unmap [index] q

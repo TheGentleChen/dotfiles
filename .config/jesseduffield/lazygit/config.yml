@@ -1,3 +1,4 @@
+# Rainbow Chen's lazygit configuration file.
 gui:
   # stuff relating to the UI
   scrollHeight: 2 # how many lines you scroll by
@@ -56,15 +57,15 @@ keybinding:
     togglePanel: '<tab>' # goto the next panel
     prevItem: '<up>' # go one line up
     nextItem: '<down>' # go one line down
-    prevItem-alt: 'i' # go one line up
-    nextItem-alt: 'k' # go one line down
-    prevPage: 'I' # go to next page in list
-    nextPage: 'K' # go to previous page in list
+    prevItem-alt: 'k' # go one line up
+    nextItem-alt: 'j' # go one line down
+    prevPage: 'K' # go to next page in list
+    nextPage: 'J' # go to previous page in list
     gotoTop: '<' # go to top of list
     gotoBottom: '>' # go to bottom of list
     prevBlock: '<left>' # goto the previous block / panel
     nextBlock: '<right>' # goto the next block / panel
-    prevBlock-alt: 'j' # goto the previous block / panel
+    prevBlock-alt: 'h' # goto the previous block / panel
     nextBlock-alt: 'l' # goto the next block / panel
     nextMatch: 'n'
     prevMatch: 'N'
@@ -136,7 +137,7 @@ keybinding:
     markCommitAsFixup: 'f'
     createFixupCommit: 'F' # create fixup commit for this commit
     squashAboveCommits: 'S'
-    moveDownCommit: '<c-i>' # move commit down one
+    moveDownCommit: '<c-j>' # move commit down one
     moveUpCommit: '<c-k>' # move commit up one
     amendToCommit: 'A'
     pickCommit: 'p' # pick commit (when mid-rebase)

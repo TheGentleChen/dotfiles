@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+instance="${instance:-$HOME}"
+alert_low="${alert_low:-10}"
+
+df -h -P $instance | awk -v alert_low=$alert_low '
+/\/.*/ {
+    # full text
+    print " " $3 "/" $2 " "
+    # short text
+    print " " $3 "/" $2 " "
+    use=$5
+    exit 0
+}
+END {
+    gsub(/%$/,"",use)
+    if (100 - use < alert_low) {
+        # color
+        print "#cc241d"
+    }
+}
+'

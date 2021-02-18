@@ -78,7 +78,6 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git systemd vi-mode zsh-completions zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.config/zsh/.zprofile
 
 # User configuration
 
@@ -130,46 +129,18 @@ alias getport="ss -plat"
 alias gi="lazygit"
 alias ydv="youtube-dl --add-metadata"
 alias yda="youtube-dl --add-metadata -x"
+alias make="compiledb make"
 
 # key for completion
 bindkey '^ ' autosuggest-accept
 
 # Use vim keys in tab complete menu:
-bindkey -M vicmd 'j' vi-backward-char
-bindkey -M vicmd 'i' vi-up-line-or-history
-bindkey -M vicmd 'l' vi-forward-char
-bindkey -M vicmd 'k' vi-down-line-or-history
-bindkey -M vicmd 'J' vi-backward-word
-bindkey -M vicmd 'L' vi-forward-word
-bindkey -M vicmd 'm' vi-insert
-bindkey -M vicmd 'M' vi-insert-bol
 bindkey -M vicmd 's' vi-swap-case
-bindkey -M vicmd '^j' vi-beginning-of-line
+bindkey -M vicmd '^h' vi-beginning-of-line
 bindkey -M vicmd '^l' vi-end-of-line
 
-# Change cursor shape for different vi modes.
-# function zle-keymap-select {
-  # if [[ ${KEYMAP} == vicmd ]] ||
-     # [[ $1 = 'block' ]]; then
-    # echo -ne '\e[1 q'
-  # elif [[ ${KEYMAP} == main ]] ||
-       # [[ ${KEYMAP} == viins ]] ||
-       # [[ ${KEYMAP} = '' ]] ||
-       # [[ $1 = 'beam' ]]; then
-    # echo -ne '\e[5 q'
-  # fi
-# }
-# zle -N zle-keymap-select
-# zle-line-init() {
-    # zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    # echo -ne "\e[5 q"
-# }
-# zle -N zle-line-init
-# echo -ne '\e[5 q' # Use beam shape cursor on startup.
-# preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+source ~/.config/zsh/key-bindings.zsh
+source ~/.config/zsh/completion.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

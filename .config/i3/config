@@ -1,9 +1,9 @@
-#============  _ _____                    __  ============#
-#============ (_)___ /    ___ ___  _ __  / _| ============#
-#============ | | |_ \   / __/ _ \| '_ \| |_  ============#
-#============ | |___) | | (_| (_) | | | |  _| ============#
-#============ |_|____/   \___\___/|_| |_|_|   ============#
-#          *This file originally by Rainbow Chen.*        #
+#=====================  _ _____                    __  ========================#
+#===================== (_)___ /    ___ ___  _ __  / _| ========================#
+#===================== | | |_ \   / __/ _ \| '_ \| |_  ========================#
+#===================== | |___) | | (_| (_) | | | |  _| ========================#
+#===================== |_|____/   \___\___/|_| |_|_|   ========================#
+# This file originally by Rainbow Chen[ https://www.github.com/rainbowhxch/] . #
 
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -17,13 +17,14 @@ set $editor $EDITOR
 
 set $inner_gaps 10
 set $outer_gaps 5
-set $border_size pixel 2
+set $border_size none
 set $script $HOME/.config/i3/script
 set $xmodmap $HOME/.config/i3/xmodmap
 set $shutdown sudo -A shutdown -h now
 set $reboot sudo -A reboot
 set $netrefresh --no-startup-id sudo -A systemctl restart NetworkManager
 set $hibernate sudo -A systemctl suspend
+set $polybar_enable 0
 
 # Get colors from Xresources
 set_from_resource $foreground i3wm.foreground #000000
@@ -60,7 +61,6 @@ exec_always --no-startup-id "picom -b"
 exec_always --no-startup-id "ibus-daemon -drx"
 # you know, lol
 exec_always --no-startup-id qv2ray
-# exec_always --no-startup-id electron-clash
 # network managerment
 exec_always --no-startup-id nm-applet
 # power managerment
@@ -69,16 +69,12 @@ exec_always --no-startup-id xfce4-power-manager
 exec_always --no-startup-id blueman-applet
 # keycode custom
 exec_always --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
-# this program is requested for Tim and Wechat
-exec_always --no-startup-id xsettingsd
-# Music Player Daemon
-exec_always --no-startup-id mpd
 # Translation app
 exec_always --no-startup-id crow
 # clipboard managerment
 exec_always --no-startup-id clipmenud
 # status bar
-exec_always --no-startup-id $script/polybar-multscreen.sh
+exec_always --no-startup-id "$script/polybar-multscreen.sh $polybar_enable"
 
 # horizontal|vertical|auto
 default_orientation horizontal
@@ -109,10 +105,10 @@ for_window [instance="Dropdown" class="st-256color"] move scratchpad
 exec --no-startup-id $terminal -n "Dropdown"
 
 # enable floating for Wine App
-for_window [class="Wine"] floating enable
-for_window [class="Wine"] border none
-for_window [class="Qq"] floating enable
-for_window [class="Qq"] border none
+for_window [instance="tim.exe" class="Wine"] floating enable
+for_window [instance="tim.exe" class="Wine"] border none
+for_window [instance="wechat.exe" class="wechat.exe"] floating enable
+for_window [instance="wechat.exe" class="wechat.exe"] border none
 
 assign [title="GIMP Startup"] number 5
 assign [class="Gimp"] number 5
@@ -121,12 +117,12 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 
 # colors
 # class                 border  backgr. text    indicator child_border
-client.focused          #2f343f #2f343f #2f343f #2f343f   #2f343f
-client.focused_inactive #2f343f #2f343f #2f343f #2f343f   #2f343f
-client.unfocused        #2f343f #2f343f #2f343f #2f343f   #2f343f
-client.urgent           #2f343f #2f343f #2f343f #2f343f   #2f343f
-client.placeholder      #2f343f #2f343f #2f343f #2f343f   #2f343f
-client.background       #2f343f #2f343f #2f343f #2f343f   #2f343f
+client.focused          $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.focused_inactive $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.unfocused        $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.urgent           $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.placeholder      $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.background       $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -139,7 +135,6 @@ bindsym $mod+F4 exec --no-startup-id $script/i3lock.sh
 # start a terminal
 bindsym $mod+Return split horizontal; exec --no-startup-id $terminal;
 bindsym $mod+Shift+Return split vertical; exec --no-startup-id $terminal;
-bindsym $mod+Ctrl+Return exec --no-startup-id $script/alacritty_samedir.sh
 
 # start the filemanager -- ranger
 bindsym $mod+semicolon exec --no-startup-id "$terminal -e ranger"
@@ -180,20 +175,20 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
 
 # split in horizontal orientation
-bindsym $mod+h splith
+bindsym $mod+i splith
 
 # change focus, move focused window and resize window (can also use the mouse for that)
-bindsym $mod+i focus up
-bindsym $mod+Shift+i move up 20 px
-bindsym $mod+Ctrl+i resize grow height 10 px or 10 ppt
+bindsym $mod+k focus up
+bindsym $mod+Shift+k move up 20 px
+bindsym $mod+Ctrl+k resize grow height 10 px or 10 ppt
 
-bindsym $mod+j focus left
-bindsym $mod+Shift+j move left 20 px
-bindsym $mod+Ctrl+j resize grow width 10 px or 10 ppt
+bindsym $mod+h focus left
+bindsym $mod+Shift+h move left 20 px
+bindsym $mod+Ctrl+h resize grow width 10 px or 10 ppt
 
-bindsym $mod+k focus down
-bindsym $mod+Shift+k move down 20 px
-bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
+bindsym $mod+j focus down
+bindsym $mod+Shift+j move down 20 px
+bindsym $mod+Ctrl+j resize shrink height 10 px or 10 ppt
 
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right 20 px
@@ -218,7 +213,7 @@ bindsym $mod+Shift+q exec --no-startup-id qtcreator
 bindsym $mod+Shift+r restart
 
 bindsym $mod+s [instance="Dropdown" class="st-256color"] scratchpad show; move position center
-bindsym $mod+Shift+s [class="Wine"] move scratchpad
+bindsym $mod+Shift+s move scratchpad
 bindsym $mod+Ctrl+s exec --no-startup-id pavucontrol
 
 bindsym $mod+t exec --no-startup-id $script/tim.sh
@@ -228,13 +223,11 @@ bindsym $mod+Shift+t [class="Wine" instance="tim.exe"] scratchpad show
 bindsym $mod+v splitv
 
 bindsym $mod+w exec --no-startup-id $script/wechat.sh
-bindsym $mod+Shift+w [class="Wine" instance="wechat.exe"] scratchpad show
+bindsym $mod+Shift+w [class="wechat.exe" instance="wechat.exe"] scratchpad show
 
 # gaps
+gaps outer $outer_gaps
 gaps inner $inner_gaps
-
-workspace $ws5 gaps inner 0
-workspace $ws5 gaps outer 0
 
 # enter fullscreen mode for the focused container
 # workspace back and forth
@@ -245,9 +238,6 @@ bindsym $mod+Shift+Escape exec --no-startup-id $script/prompt "Exit i3?" "i3 exi
 # keyboard layout toggle
 bindsym $win+k exec --no-startup-id xmodmap $xmodmap/.Xmodmap-qwerty
 bindsym $win+Shift+k exec --no-startup-id xmodmap $xmodmap/.Xmodmap-colemak
-
-# screen lock
-# bindsym $mod+F4 exec "dm-tool lock"
 
 # alternatively bindings
 bindsym $mod+Left focus left
@@ -278,8 +268,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace $ws1 output eDP1
-workspace $ws2 output eDP1
+workspace $ws1 output HDMI-1
+workspace $ws2 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -326,13 +316,21 @@ bindsym XF86Launch7 exec --no-startup-id xbacklight -dec 10
 
 # Start bumblebee-status to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-    # font pango:DroidSansMono Nerd Font 10
-    # position top
-    # tray_output primary
+bar {
+    font pango:JetBrainsMono Nerd Font 10
+    position top
+    workspace_buttons yes
+    colors {
+        background #282828
+        statusline #ebdbb2
+        focused_workspace  #928374 #98971a #282828
+        active_workspace   #928374 #ebdbb2 #282828
+        inactive_workspace #928374 #ebdbb2 #282828
+    }
+    status_command i3blocks
     # status_command /usr/bin/bumblebee-status -m mpd nic disk:root cpu \
 	# memory battery-upower pasink pasource datetime \
 	# -p interval=1 root.path=/ disk.format="{used}/{size}" \
 	# battery.device=CMB0 nic.format="{intf} {ip}" memory.format="{percent:05.02f}%" \
 	# -t iceberg
-# }
+}

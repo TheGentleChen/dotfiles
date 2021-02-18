@@ -1,0 +1,68 @@
+# Rainbow Chen's i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+    colors = true
+    interval = 1
+    output_format = "i3bar"
+    markup = pango
+    color_good = "#458588"
+    color_degraded = "#d79921"
+    color_bad = "#b16286"
+}
+
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "battery 0"
+order += "volume master"
+order += "wireless _first_"
+# order += "ethernet _first_"
+order += "tztime local"
+
+cpu_usage {
+    format = "<span background='#cc241d' foreground='#ebdbb2'>  %usage </span>"
+}
+
+memory {
+        format = "<span background='#98971a' foreground='#ebdbb2'>  %used / %total </span>"
+}
+
+disk "/" {
+        format = "<span background='#d79921' foreground='#ebdbb2'>  %avail / %total </span>"
+}
+
+battery 0 {
+        format = "<span background='#458588' foreground='#ebdbb2'> %status %percentage %remaining </span>"
+        format_down = "<span background='#458588' foreground='#ebdbb2'>   No battery </span>"
+        status_chr = " "
+        status_bat = " "
+        status_unk = " "
+        status_full = " "
+        path = "/sys/class/power_supply/CMB0/uevent"
+}
+
+volume master {
+        format = "<span background='#689d6a' foreground='#ebdbb2'>  %volume </span>"
+        format_muted = "<span background='#689d6a' foreground='#ebdbb2'>  %volume </span>"
+}
+
+wireless _first_ {
+        format_up = "<span background='#b16286' foreground='#ebdbb2'>  %essid %ip </span>"
+        format_down = "<span background='#b16286' foreground='#ebdbb2'>  Down </span>"
+}
+
+ethernet _first_ {
+        format_up = "<span background='#b16286' foreground='#ebdbb2'>  %ip </span>"
+        format_down = "<span background='#b16286' foreground='#ebdbb2'>  Down </span>"
+}
+
+tztime local {
+        format = "<span background='#a89984' foreground='#ebdbb2'>  %time</span>"
+        format_time = "%Y-%m-%d %H:%M:%S"
+}

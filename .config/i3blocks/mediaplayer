@@ -155,4 +155,4 @@ elsif ($player_arg =~ /rhythmbox/) {
 else {
     playerctl;
 }
-print("\n");
+print(" \n");

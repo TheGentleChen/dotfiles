@@ -73,6 +73,7 @@ exec_always --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
 exec_always --no-startup-id crow
 # clipboard managerment
 exec_always --no-startup-id clipmenud
+exec_always --no-startup-id "mpd &"
 # status bar
 exec_always --no-startup-id "$script/polybar-multscreen.sh $polybar_enable"
 
@@ -107,8 +108,8 @@ exec --no-startup-id $terminal -n "Dropdown"
 # enable floating for Wine App
 for_window [instance="tim.exe" class="Wine"] floating enable
 for_window [instance="tim.exe" class="Wine"] border none
-for_window [instance="wechat.exe" class="wechat.exe"] floating enable
-for_window [instance="wechat.exe" class="wechat.exe"] border none
+for_window [instance="wechat.exe" class="Wine"] floating enable
+for_window [instance="wechat.exe" class="Wine"] border none
 
 assign [title="GIMP Startup"] number 5
 assign [class="Gimp"] number 5
@@ -180,19 +181,19 @@ bindsym $mod+i splith
 # change focus, move focused window and resize window (can also use the mouse for that)
 bindsym $mod+k focus up
 bindsym $mod+Shift+k move up 20 px
-bindsym $mod+Ctrl+k resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize shrink height 10 px or 10 ppt
 
 bindsym $mod+h focus left
 bindsym $mod+Shift+h move left 20 px
-bindsym $mod+Ctrl+h resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
 
 bindsym $mod+j focus down
 bindsym $mod+Shift+j move down 20 px
-bindsym $mod+Ctrl+j resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize grow height 10 px or 10 ppt
 
 bindsym $mod+l focus right
 bindsym $mod+Shift+l move right 20 px
-bindsym $mod+Ctrl+l resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
 
 bindsym $mod+m gaps inner all minus 5
 bindsym $mod+Shift+m gaps outer all minus 5
@@ -213,7 +214,7 @@ bindsym $mod+Shift+q exec --no-startup-id qtcreator
 bindsym $mod+Shift+r restart
 
 bindsym $mod+s [instance="Dropdown" class="st-256color"] scratchpad show; move position center
-bindsym $mod+Shift+s move scratchpad
+bindsym $mod+Shift+s [class="Wine"] move scratchpad
 bindsym $mod+Ctrl+s exec --no-startup-id pavucontrol
 
 bindsym $mod+t exec --no-startup-id $script/tim.sh
@@ -223,7 +224,7 @@ bindsym $mod+Shift+t [class="Wine" instance="tim.exe"] scratchpad show
 bindsym $mod+v splitv
 
 bindsym $mod+w exec --no-startup-id $script/wechat.sh
-bindsym $mod+Shift+w [class="wechat.exe" instance="wechat.exe"] scratchpad show
+bindsym $mod+Shift+w [class="Wine" instance="wechat.exe"] scratchpad show
 
 # gaps
 gaps outer $outer_gaps
@@ -299,10 +300,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id i3-volume up 5
+bindsym XF86AudioLowerVolume exec --no-startup-id i3-volume down 5
+bindsym XF86AudioMute exec --no-startup-id i3-volume mute
+bindsym XF86AudioMicMute exec --no-startup-id i3-volume mute
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 bindsym XF86Tools exec --no-startup-id $script/touchpad_toggle.sh
@@ -310,9 +311,11 @@ bindsym XF86Mail exec --no-startup-id "$browser https://mail.163.com"
 bindsym XF86Search exec --no-startup-id $browser
 bindsym XF86HomePage exec --no-startup-id "$browser https://github.com/rainbowhxch"
 bindsym XF86Calculator exec "$terminal -e python"
-bindsym XF86Launch5 exec --no-startup-id $script/i3lock.sh
-bindsym XF86Launch6 exec --no-startup-id xbacklight -inc 10
-bindsym XF86Launch7 exec --no-startup-id xbacklight -dec 10
+
+# keybindings for i3blocks' signal handle
+bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+for_window [class="Yad"] floating enable
 
 # Start bumblebee-status to display a workspace bar (plus the system information i3status
 # finds out, if available)

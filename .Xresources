@@ -55,10 +55,8 @@ URxvt.color7:       #6f798c
 URxvt.color15:      #9faab8
 
 ! gruvbox theme
-! hard contrast: *background: #1d2021
 *background: #282828
-! soft contrast: *background: #32302f
-*foreground: #ebdbb2
+*foreground: #fbf1c7
 ! Black + DarkGrey
 *color0:  #282828
 *color8:  #928374

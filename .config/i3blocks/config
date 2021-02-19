@@ -10,7 +10,7 @@ command=~/.config/i3blocks/$name
 [mediaplayer]
 instance=mpd
 label= 
-interval=once
+interval=1
 background=#8ec07c
 signal=10
 
@@ -37,9 +37,35 @@ background=#458588
 
 [volume]
 label= 
-interval=once
+interval=1
 background=#689d6a
 signal=10
+
+[keyindicator]
+KEY=CAPS
+interval=once
+background=#928374
+signal=11
+COLOR_ON=#fabd2f
+COLOR_OFF=#282828
+
+[keyindicator]
+KEY=NUM
+interval=once
+background=#b8bb26
+signal=11
+COLOR_ON=#fabd2f
+COLOR_OFF=#282828
+
+[aur_update]
+label= 
+format=json
+interval=43200
+background=#d65d0e
+UPDATE_COLOR=#fabd2f
+QUIET=0
+IGNORE=root
+CACHE_UPDATES=1
 
 [wifi]
 instance=wlp0s20f3

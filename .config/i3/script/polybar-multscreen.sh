@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 # Open polybar in mult-screens
 
-walpaper_sigle_cmd='feh -q --bg-fill --no-fehbg ~/Pictures/background.jpg'
-walpaper_multi_cmd='feh -q --bg-fill --no-fehbg ~/Pictures/background.jpg ~/Pictures/background2.jpg'
+walpaper_sigle_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg"
+walpaper_multi_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg $HOME/Pictures/background2.jpg"
 polybar_config='~/.config/polybar/config.ini'
 display_sigle='eDP-1'
 display_multi='HDMI-1'

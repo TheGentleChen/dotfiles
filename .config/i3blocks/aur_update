@@ -76,7 +76,7 @@ def vcs_version(pkg, ver):
 
 
 # show the list of updates already cached
-if args.cache_updates and block_button in [2, 3]:
+if args.cache_updates and block_button in [1, 3]:
     if '_update_cache' in os.environ:
         updates = os.environ['_update_cache']
     else:
@@ -105,9 +105,9 @@ for pkg in installed_version.keys():
 # create the message for the block
 n_updates = len(updates)
 if n_updates > 0:
-    msg = "<span color='{0}'> {1} AUR updates </span>".format(args.update_color, n_updates)
+    msg = "<span color='{0}'>  {1} AUR updates </span>".format(args.update_color, n_updates)
 elif not args.quiet:
-    msg = ' AUR up to date '
+    msg = '  AUR up to date '
 
 # turn it into a json message
 msg = {'full_text': msg}
@@ -119,7 +119,7 @@ if args.cache_updates:
 print(json.dumps(msg))
 
 # if you don't use caching, show the new list of updates
-if not args.cache_updates and block_button in [2, 3]:
+if not args.cache_updates and block_button in [1, 3]:
     sp.call(['notify-send', 'AUR updates', '\n'.join(updates) or 'up to date'])
 
 if not 'BLOCK_NAME' in os.environ and n_updates > 0:

@@ -12,7 +12,7 @@
 ## ncmpcpp.
 ##
 #
-ncmpcpp_directory = ~/.ncmpcpp
+ncmpcpp_directory = ~/.config/ncmpcpp/
 #
 ##
 ## Directory for storing downloaded lyrics. It defaults to ~/.lyrics since other
@@ -42,14 +42,12 @@ mpd_crossfade_time = 5
 ## visualization or 44100:16:2 for stereo visualization. Example configuration
 ## (it has to be put into mpd.conf):
 ##
-## audio_output {
-##        type            "fifo"
-##        name            "Visualizer feed"
-##        path            "/tmp/mpd.fifo"
-##        format          "44100:16:2"
-## }
-##
-#
+audio_output {
+       type            "fifo"
+       name            "Visualizer feed"
+       path            "/tmp/mpd.fifo"
+       format          "44100:16:2"
+}
 visualizer_fifo_path = /tmp/mpd.fifo
 #
 ##
@@ -543,4 +541,4 @@ visualizer_color = blue, cyan, green, yellow, magenta, red
 #
 #active_window_border = red
 #
-execute_on_song_change="~/.ncmpcpp/ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"
+execute_on_song_change="./ncmpcpp-ueberzug/ncmpcpp_cover_art.sh"

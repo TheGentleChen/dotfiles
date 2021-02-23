@@ -12,7 +12,7 @@ set $mod Mod1
 set $win Mod4
 
 set $terminal $TERMINAL
-set $browser $BROWSER
+set $browser $BROWSER --proxy-server="http://127.0.0.1:12333"
 set $editor $EDITOR
 
 set $inner_gaps 10
@@ -234,7 +234,7 @@ gaps inner $inner_gaps
 # workspace back and forth
 bindsym $mod+Tab workspace back_and_forth
 # exit i3
-bindsym $mod+Shift+Escape exec --no-startup-id $script/prompt "Exit i3?" "i3 exit"
+bindsym $mod+Shift+Escape exec --no-startup-id $script/prompt.sh "Exit i3?" "i3 exit"
 
 # keyboard layout toggle
 bindsym $win+k exec --no-startup-id xmodmap $xmodmap/.Xmodmap-qwerty

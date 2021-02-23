@@ -4,76 +4,76 @@ markup=pango
 separator=true
 separator_block_width=10
 align=center
-color=#282828
+background=#282828
 command=~/.config/i3blocks/$name
 
 [mediaplayer]
 instance=mpd
 label= 
 interval=1
-background=#8ec07c
+color=#8ec07c
 signal=10
 
 [cpu_usage]
 label= 
 interval=10
-background=#cc241d
+color=#83a598
 
 [memory]
 label= 
 interval=30
-background=#98971a
+color=#98971a
 
 [disk]
 label= 
 instance=/
 interval=30
-background=#d79921
+color=#d79921
 
 [battery]
 label= 
 interval=10
-background=#458588
+color=#458588
 
 [volume]
 label= 
 interval=1
-background=#689d6a
+color=#689d6a
 signal=10
 
 [keyindicator]
 KEY=CAPS
 interval=once
-background=#928374
+color=#b8bb26
 signal=11
-COLOR_ON=#fabd2f
-COLOR_OFF=#282828
+COLOR_ON=#cc241d
+COLOR_OFF=#b8bb26
 
 [keyindicator]
 KEY=NUM
 interval=once
-background=#b8bb26
+color=#b8bb26
 signal=11
-COLOR_ON=#fabd2f
-COLOR_OFF=#282828
+COLOR_ON=#cc241d
+COLOR_OFF=#b8bb26
 
 [aur_update]
-label= 
+label=
+interval=3600
+color=#d65d0e
 format=json
-interval=43200
-background=#d65d0e
-UPDATE_COLOR=#fabd2f
+UPDATE_COLOR=#cc241d
 QUIET=0
-IGNORE=root
+IGNORE=
 CACHE_UPDATES=1
 
 [wifi]
 instance=wlp0s20f3
 interval=10
 label= 
-background=#b16286
+color=#b16286
 
 [date]
 interval=1
 label= 
-background=#a89984
+color=#fabd2f

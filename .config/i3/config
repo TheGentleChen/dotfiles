@@ -119,11 +119,11 @@ for_window [window_role="gimp-toolbox"] floating disable; move right; resize gro
 # colors
 # class                 border  backgr. text    indicator child_border
 client.focused          $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
-client.focused_inactive $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
-client.unfocused        $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
-client.urgent           $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
-client.placeholder      $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
-client.background       $bright_magenta $bright_magenta $bright_magenta $bright_magenta   $bright_magenta
+client.focused_inactive $foreground $foreground $foreground $foreground   $foreground
+client.unfocused        $foreground $foreground $foreground $foreground   $foreground
+client.urgent           $foreground $foreground $foreground $foreground   $foreground
+client.placeholder      $foreground $foreground $foreground $foreground   $foreground
+client.background       $foreground $foreground $foreground $foreground   $foreground
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.

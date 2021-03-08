@@ -30,8 +30,9 @@ ESSID=$(/sbin/iwconfig $instance | perl -n -e'/ESSID:"(.*?)"/ && print $1')
 
 #------------------------------------------------------------------------
 
-echo -n " $ESSID " # full text
 ip_address=$(./ip)
+
+echo -n " $ESSID " # full text
 echo "$ip_address "
 echo -n " $ESSID " # short text
 echo "$ip_address "

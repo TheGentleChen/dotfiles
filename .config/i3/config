@@ -11,7 +11,7 @@
 set $mod Mod1
 set $win Mod4
 
-set $terminal $TERMINAL
+set $terminal $TERM
 set $browser $BROWSER --proxy-server="http://127.0.0.1:12333"
 set $editor $EDITOR
 
@@ -76,6 +76,8 @@ exec_always --no-startup-id clipmenud
 exec_always --no-startup-id "mpd &"
 # status bar
 exec_always --no-startup-id "$script/polybar-multscreen.sh $polybar_enable"
+# udisks monitor
+exec_always --no-startup-id "udiskie --tray &"
 
 # horizontal|vertical|auto
 default_orientation horizontal

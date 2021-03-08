@@ -9,7 +9,7 @@ fi
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion.
- CASE_SENSITIVE="false"
+CASE_SENSITIVE="false"
 
 # Hyphen-insensitive completion.
 HYPHEN_INSENSITIVE="true"
@@ -25,7 +25,7 @@ plugins=(
     zsh-interactive-cd
 )
 
-export ZSH="/home/ch/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
@@ -36,7 +36,7 @@ alias r="ranger"
 alias v="nvim"
 alias vim="nvim"
 alias mkdir="mkdir -pv"
-alias sudo="sudo -A -E"
+alias sudo="sudo -E"
 alias pac="sudo pacman"
 alias gi="lazygit"
 alias make="compiledb make"
@@ -74,8 +74,8 @@ bindkey -M vicmd 's' vi-swap-case
 bindkey -M vicmd '^h' vi-beginning-of-line
 bindkey -M vicmd '^l' vi-end-of-line
 
-source ~/.config/zsh/key-bindings.zsh
-source ~/.config/zsh/completion.zsh
+source $HOME/.config/zsh/key-bindings.zsh
+source $HOME/.config/zsh/completion.zsh
 
 colorscript -e elfman
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.

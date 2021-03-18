@@ -79,9 +79,9 @@ format() {
   output=$(perl -ne "$perl_filter")
 
   # full_text
-  echo " $output "
+  echo " 墳 $output "
   # short_text
-  echo " $output "
+  echo " 墳 $output "
 }
 
 #------------------------------------------------------------------------

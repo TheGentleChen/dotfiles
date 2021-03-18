@@ -141,7 +141,7 @@ sub rhythmbox {
     print($data);
 }
 
-print(" ");
+print("  ");
 
 if ($player_arg eq '' or $player_arg =~ /mpd/) {
     mpd;

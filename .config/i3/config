@@ -54,30 +54,30 @@ floating_modifier $mod
 font pango:Source Code Pro 10
 
 # always mute microphone at startup
-exec_always --no-startup-id amixer sset Capture nocap
+exec --no-startup-id amixer sset Capture nocap
 # compositor
-exec_always --no-startup-id "picom -b"
+exec --no-startup-id "picom -b"
 # input method framework for pinin
-exec_always --no-startup-id "ibus-daemon -drx"
+exec --no-startup-id "ibus-daemon -drx"
 # you know, lol
-exec_always --no-startup-id qv2ray
+exec --no-startup-id qv2ray
 # network managerment
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 # power managerment
-exec_always --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 # bluetooth managerment
-exec_always --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 # keycode custom
-exec_always --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
+exec --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
 # Translation app
-exec_always --no-startup-id crow
+exec --no-startup-id crow
 # clipboard managerment
-exec_always --no-startup-id clipmenud
-exec_always --no-startup-id "mpd &"
+exec --no-startup-id clipmenud
+exec --no-startup-id "mpd &"
 # status bar
-exec_always --no-startup-id "$script/polybar-multscreen.sh $polybar_enable"
+exec --no-startup-id "$script/polybar-multscreen.sh $polybar_enable"
 # udisks monitor
-exec_always --no-startup-id "udiskie --tray &"
+exec --no-startup-id "udiskie --tray &"
 
 # horizontal|vertical|auto
 default_orientation horizontal

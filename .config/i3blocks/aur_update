@@ -47,7 +47,7 @@ args.add_argument('CACHE_UPDATES', False, bool)
 
 def version_in_aur(pkg):
     p = {'v': '5', 'type': 'search', 'by': 'name', 'arg': pkg}
-    response = requests.get('https://aur.archlinux.org/rpc/', params=p)
+    response = requests.get('https://aur.tuna.tsinghua.edu.cn/rpc/', params=p)
     response = response.json()
     for r in response['results']:
         if r['Name'] == pkg:
@@ -105,9 +105,9 @@ for pkg in installed_version.keys():
 # create the message for the block
 n_updates = len(updates)
 if n_updates > 0:
-    msg = "<span color='{0}'>  {1} AUR updates </span>".format(args.update_color, n_updates)
+    msg = "<span color='{0}'> {1} AUR updates </span>".format(args.update_color, n_updates)
 elif not args.quiet:
-    msg = '  AUR up to date '
+    msg = ' AUR up to date '
 
 # turn it into a json message
 msg = {'full_text': msg}

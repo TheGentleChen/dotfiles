@@ -9,34 +9,28 @@ command=~/.config/i3blocks/$name
 
 [mediaplayer]
 instance=mpd
-label= 
 interval=1
 color=#8ec07c
 signal=10
 
 [cpu_usage]
-label= 
 interval=10
 color=#83a598
 
 [memory]
-label= 
 interval=30
 color=#98971a
 
 [disk]
-label= 
 instance=/
 interval=30
 color=#d79921
 
 [battery]
-label= 
 interval=10
 color=#458588
 
 [volume]
-label= 
 interval=1
 color=#689d6a
 signal=10
@@ -70,10 +64,8 @@ CACHE_UPDATES=1
 [wifi]
 instance=wlp0s20f3
 interval=10
-label= 
 color=#b16286
 
 [date]
 interval=1
-label= 
 color=#fabd2f

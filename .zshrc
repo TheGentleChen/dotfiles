@@ -62,7 +62,7 @@ alias rm='rm -i'
 # Add colors
 alias ls='exa -l --color=always --group-directories-first' # my preferred listing
 alias ll='exa -al --color=always --group-directories-first' # my preferred listing
-alias cat='bat -p'
+alias cat='bat'
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 

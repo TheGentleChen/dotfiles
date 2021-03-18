@@ -6,9 +6,9 @@ alert_low="${alert_low:-10}"
 df -h -P $instance | awk -v alert_low=$alert_low '
 /\/.*/ {
     # full text
-    print " " $3 "/" $2 " "
+    print "  " $3 "/" $2 " "
     # short text
-    print " " $3 "/" $2 " "
+    print "  " $3 "/" $2 " "
     use=$5
     exit 0
 }

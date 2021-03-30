@@ -27,7 +27,7 @@ display_multi='HDMI-1'
   if [[ $outputs_cnt == 1 ]]; then
       $walpaper_sigle_cmd
   elif [[ $outputs_cnt == 2 ]]; then
-    xrandr --output $display_multi --auto --left-of $display_sigle
+    xrandr --output $display_sigle --mode 1920x1080 --pos 1920x0 --rotate normal --output $display_multi --primary --mode 1920x1080 --pos 0x0 --rotate normal
     $walpaper_multi_cmd
     tray_output=$display_multi
   fi

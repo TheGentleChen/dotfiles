@@ -2,7 +2,8 @@
     <h1>RainbowCh's Dotfiles🍚</h1>
 </div>
 
-![Screenshot-1](./screenshot.png)
+![screenshot-i3blocks](./screenshot-i3blocks.jpg)
+![screenshot-polybar](./screenshot-polybar.png)
 
 ## Details
 
@@ -22,7 +23,7 @@
 - 🆎Editor: [NeoVim](https:github.com/rainbowhxch/nvim)
 - 📁File browser: ranger
 - 🏃Runner: [customized dmenu](https://github.com/rainbowhxch/dmenu)
-- 🖼:Picture Viewer: sxiv
+- 🖼Picture Viewer: sxiv
 - 🐼PDF Viewer: zathura
 
 ## How to use

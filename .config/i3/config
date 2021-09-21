@@ -70,7 +70,7 @@ exec --no-startup-id blueman-applet
 # keycode custom
 exec --no-startup-id "xmodmap $xmodmap/.Xmodmap-qwerty"
 # Translation app
-exec --no-startup-id crow
+# exec --no-startup-id crow
 # clipboard managerment
 exec --no-startup-id clipmenud
 exec --no-startup-id "mpd &"
@@ -271,8 +271,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace $ws1 output HDMI-1
-workspace $ws2 output eDP-1
+workspace $ws1 output eDP-1
+workspace $ws2 output HDMI-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

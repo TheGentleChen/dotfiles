@@ -66,6 +66,13 @@ alias cat='bat'
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
 
+# fzf advanced
+alias pskill="(date; ps -ef) |
+  fzf --bind='ctrl-r:reload(date; ps -ef)' \
+      --header=$'Press CTRL-R to reload\n\n' --header-lines=2 \
+      --preview='echo {}' --preview-window=down,3,wrap \
+      --layout=reverse --height=80% | awk '{print $2}' | xargs kill -9"
+
 # key for completion
 bindkey '^ ' autosuggest-accept
 
@@ -80,3 +87,8 @@ source $HOME/.config/zsh/completion.zsh
 colorscript -e elfman
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+eval $(thefuck --alias)
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

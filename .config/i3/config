@@ -12,7 +12,7 @@ set $mod Mod1
 set $win Mod4
 
 set $terminal $TERM
-set $browser $BROWSER --proxy-server="http://127.0.0.1:12333"
+set $browser $BROWSER
 set $editor $EDITOR
 
 set $inner_gaps 10
@@ -271,8 +271,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-workspace $ws1 output eDP-1
-workspace $ws2 output HDMI-1
+workspace $ws1 output DP-1
+workspace $ws2 output eDP-1
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

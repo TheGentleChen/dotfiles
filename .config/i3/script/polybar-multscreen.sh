@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 # Open polybar in mult-screens
 
-walpaper_sigle_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg"
+walpaper_single_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg"
 walpaper_multi_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg $HOME/Pictures/background2.jpg"
 polybar_config='~/.config/polybar/config.ini'
-display_sigle='eDP-1'
-display_multi='HDMI-1'
+display_single='eDP-1'
+display_multi='DP-1'
 
 (
   flock 200
@@ -13,7 +13,7 @@ display_multi='HDMI-1'
   if [[ $1 = 1 ]]; then
       killall -q polybar
       while pgrep -u $UID -x polybar > /dev/null; do sleep 0.5; done
-      tray_output=$display_sigle
+      tray_output=$display_single
   fi
 
   outputs=$(xrandr --query | grep " connected" | cut -d" " -f1)
@@ -22,12 +22,12 @@ display_multi='HDMI-1'
     outputs_cnt=$(expr $outputs_cnt + 1)
   done
 
-  xrandr --output $display_sigle --primary
 
   if [[ $outputs_cnt == 1 ]]; then
-      $walpaper_sigle_cmd
+      xrandr --output $display_single --mode 1920x1080 --scale 2.0 --primary
+      $walpaper_single_cmd
   elif [[ $outputs_cnt == 2 ]]; then
-    xrandr --output $display_sigle --mode 1920x1080 --pos 1920x0 --rotate normal --output $display_multi --primary --mode 1920x1080 --pos 0x0 --rotate normal
+    xrandr --output $display_multi --mode 3840x2160 --scale 0.9999 --primary --output $display_single --mode 1920x1080 --scale 2.0 --right-of $display_multi
     $walpaper_multi_cmd
     tray_output=$display_multi
   fi

@@ -31,4 +31,4 @@ nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &
 # udisks monitor
 nohup udiskie --tray >> $temp_file &
 # dwmblocks
-nohup dwmblocks >> $temp_file &
+nohup ./dwmstatus >> $temp_file &

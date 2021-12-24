@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="refined"
 
 # Case-sensitive completion.
 CASE_SENSITIVE="false"
@@ -31,7 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 # Shortcuts
 alias c="clear"
-alias s="neofetch | lolcat"
+alias s="neofetch"
 alias r="ranger"
 alias v="nvim"
 alias vim="nvim"
@@ -83,7 +83,7 @@ bindkey -M vicmd '^l' vi-end-of-line
 source $HOME/.config/zsh/key-bindings.zsh
 source $HOME/.config/zsh/completion.zsh
 
-colorscript -e elfman
+# colorscript -e elfman
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 

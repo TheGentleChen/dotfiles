@@ -1,8 +1,0 @@
-#!/bin/sh
-
-cd ~/.config/dwmblocks/scripts/
-
-while true; do
-    xsetroot -name "$(./disk)|$(./wifi)|$(./memory)|$(./volume)|$(./battery)|$(./date)"
-	sleep 1
-done

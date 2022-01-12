@@ -2,3 +2,5 @@
 
 # Read configuration from .profile
 [[ -f $HOME/.profile ]] && source $HOME/.profile
+
+source /home/ch/.config/broot/launcher/bash/br

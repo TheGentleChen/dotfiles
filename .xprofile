@@ -35,4 +35,6 @@ nohup udiskie --tray >> $temp_file &
 # dwm status
 nohup $dwmstatus >> $temp_file &
 # status bar
-nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &
+# nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &
+xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --primary --output eDP-1 --mode 1920x1080 --pos 1920x0 --right-of HDMI-1
+feh -q --bg-fill --no-fehbg ~/Pictures/background.jpg ~/Pictures/background2.jpg

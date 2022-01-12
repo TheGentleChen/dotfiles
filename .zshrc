@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
+
 # Theme
 ZSH_THEME="refined"
 
@@ -29,7 +31,6 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # Aliases
-# Shortcuts
 alias c="clear"
 alias s="neofetch"
 alias r="ranger"
@@ -58,8 +59,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Add colors
-alias ls='exa -l --color=always --group-directories-first' # my preferred listing
-alias ll='exa -al --color=always --group-directories-first' # my preferred listing
+alias ls='exa -l --color=always --icons --group-directories-first'
+alias ll='exa -al --color=always --icons --group-directories-first'
 alias cat='bat'
 alias diff="diff --color=auto"
 alias grep="grep --color=auto"
@@ -83,10 +84,9 @@ source $HOME/.config/zsh/key-bindings.zsh
 source $HOME/.config/zsh/completion.zsh
 
 # colorscript -e elfman
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
 eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /home/ch/.config/broot/launcher/bash/br

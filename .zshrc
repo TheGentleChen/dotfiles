@@ -5,10 +5,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [ ! "$TMUX" = "" ]; then export TERM=xterm-256color; fi
-
+if [ ! "$TMUX" = "" ]
+    then export TERM=xterm-256color
+fi
 # Theme
-ZSH_THEME="refined"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion.
 CASE_SENSITIVE="false"
@@ -18,7 +19,6 @@ HYPHEN_INSENSITIVE="true"
 
 # Plugins
 plugins=(
-    command-not-found
     systemd
     vi-mode
     zsh-completions
@@ -32,6 +32,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias c="clear"
+alias e='exit'
+alias t='tmux'
 alias s="neofetch"
 alias r="ranger"
 alias v="nvim"
@@ -88,5 +90,3 @@ eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-source /home/ch/.config/broot/launcher/bash/br

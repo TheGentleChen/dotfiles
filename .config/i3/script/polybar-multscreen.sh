@@ -5,7 +5,7 @@ walpaper_single_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg"
 walpaper_multi_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg $HOME/Pictures/background2.jpg"
 polybar_config='~/.config/polybar/config.ini'
 display_single='eDP-1'
-display_multi='HDMI-1'
+display_multi='DP-1'
 
 (
   flock 200
@@ -23,7 +23,7 @@ display_multi='HDMI-1'
       xrandr --output $display_single --mode 1920x1080 --scale 1.5 --primary
       $walpaper_single_cmd
   elif [ $outputs_cnt -eq 2 ]; then
-    xrandr --output $display_multi --mode 1920x1080 --pos 0x0 --scale 1 --primary --output $display_single --mode 1920x1080 --pos 1920x0 --scale 1 --right-of $display_multi
+    xrandr --output $display_multi --mode 3840x2160 --pos 0x0 --scale 0.9999 --primary --output $display_single --mode 1920x1080 --pos 3840x0 --scale 1.5 --right-of $display_multi
     $walpaper_multi_cmd
     tray_output=$display_multi
   fi

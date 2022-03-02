@@ -11,10 +11,10 @@ dwmstatus=$HOME/.config/dwm/status/dwmstatus
 # always mute microphone at startup
 nohup amixer sset Capture nocap > $temp_file &
 # compositor
-picom -b
+picom --experimental-backend -b --config $HOME/.config/picom/picom.conf
 # input method framework for pinin
 ibus-daemon -drx
-# you know, lol
+# you know
 nohup qv2ray >> $temp_file &
 # network managerment
 nohup nm-applet >> $temp_file &
@@ -23,7 +23,8 @@ nohup xfce4-power-manager >> $temp_file &
 # bluetooth managerment
 nohup blueman-applet >> $temp_file &
 # keycode custom
-nohup xmodmap $xmodmap/.Xmodmap-qwerty >> $temp_file &
+# setxkbmap -option caps:ctrl_modifier
+nohup xmodmap $xmodmap/.Xmodmap >> $temp_file &
 # Translation app
 nohup crow >> $temp_file &
 # clipboard managerment
@@ -34,7 +35,9 @@ nohup mpd >> $temp_file &
 nohup udiskie --tray >> $temp_file &
 # dwm status
 nohup $dwmstatus >> $temp_file &
+# autokey
+nohup autokey-qt >> $temp_file &
+# conky
+nohup conky -c $HOME/.config/conky/conky.conf >> $temp_file &
 # status bar
-# nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &
-xrandr --output HDMI-1 --mode 1920x1080 --pos 0x0 --primary --output eDP-1 --mode 1920x1080 --pos 1920x0 --right-of HDMI-1
-feh -q --bg-fill --no-fehbg ~/Pictures/background.jpg ~/Pictures/background2.jpg
+nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &

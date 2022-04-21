@@ -37,7 +37,6 @@ alias t='tmux'
 alias s="neofetch"
 alias r="ranger"
 alias v="nvim"
-alias vim="nvim"
 alias mkdir="mkdir -pv"
 alias pac="sudo pacman"
 alias gi="lazygit"
@@ -84,9 +83,6 @@ bindkey -M vicmd '^l' vi-end-of-line
 
 source $HOME/.config/zsh/key-bindings.zsh
 source $HOME/.config/zsh/completion.zsh
-
-# colorscript -e elfman
-eval $(thefuck --alias)
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

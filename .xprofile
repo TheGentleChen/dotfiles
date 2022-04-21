@@ -1,6 +1,8 @@
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS="@im=ibus"
+export GLFW_IM_MODULE=ibus
+export DEEPIN_WINE_SCALE=2.00
 
 script=$HOME/.config/i3/script
 xmodmap=$HOME/.config/i3/xmodmap
@@ -38,6 +40,6 @@ nohup $dwmstatus >> $temp_file &
 # autokey
 nohup autokey-qt >> $temp_file &
 # conky
-nohup conky -c $HOME/.config/conky/conky.conf >> $temp_file &
+# nohup conky -c $HOME/.config/conky/conky.conf >> $temp_file &
 # status bar
 nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &

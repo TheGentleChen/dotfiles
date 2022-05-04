@@ -7,7 +7,7 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Default programs:
 export EDITOR="nvim"
-export TERM="xterm-kitty"
+export TERM="alacritty"
 export BROWSER="google-chrome-stable"
 export PAGER="less"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -21,3 +21,17 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export FZF_DEFAULT_OPTS='--bind=ctrl-i:up,ctrl-k:down,ctrl-j:backward-char,ctrl-l:forward-char'
 export TERM_ITALICS=true
+
+# ibus
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS="@im=ibus"
+export GLFW_IM_MODULE=ibus
+
+# wine
+export DEEPIN_WINE_SCALE=2.00
+
+# wayland
+# export QT_QPA_PLATFORM=wayland
+# export MOZ_ENABLE_WAYLAND=1
+# [ "$(tty)" = "/dev/tty1" ] && exec wayfire

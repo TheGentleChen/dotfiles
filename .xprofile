@@ -1,9 +1,3 @@
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS="@im=ibus"
-export GLFW_IM_MODULE=ibus
-export DEEPIN_WINE_SCALE=2.00
-
 script=$HOME/.config/i3/script
 xmodmap=$HOME/.config/i3/xmodmap
 polybar_enable=0
@@ -25,8 +19,9 @@ nohup xfce4-power-manager >> $temp_file &
 # bluetooth managerment
 nohup blueman-applet >> $temp_file &
 # keycode custom
-# setxkbmap -option caps:ctrl_modifier
-nohup xmodmap $xmodmap/.Xmodmap >> $temp_file &
+setxkbmap -option ctrl:nocaps
+# nohup xmodmap $xmodmap/.Xmodmap >> $temp_file &
+xcape -e 'Control_L=Escape'
 # Translation app
 nohup crow >> $temp_file &
 # clipboard managerment
@@ -38,7 +33,7 @@ nohup udiskie --tray >> $temp_file &
 # dwm status
 nohup $dwmstatus >> $temp_file &
 # autokey
-nohup autokey-qt >> $temp_file &
+# nohup autokey-qt >> $temp_file &
 # conky
 # nohup conky -c $HOME/.config/conky/conky.conf >> $temp_file &
 # status bar

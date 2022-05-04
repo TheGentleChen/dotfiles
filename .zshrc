@@ -9,6 +9,7 @@ if [ ! "$TMUX" = "" ]
     then export TERM=xterm-256color
 fi
 # Theme
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion.

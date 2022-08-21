@@ -38,3 +38,5 @@ nohup $dwmstatus >> $temp_file &
 # nohup conky -c $HOME/.config/conky/conky.conf >> $temp_file &
 # status bar
 nohup $script/polybar-multscreen.sh $polybar_enable >> $temp_file &
+# key repeat delay and rete
+xset r rate 350 18

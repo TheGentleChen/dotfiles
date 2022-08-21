@@ -4,8 +4,8 @@
 walpaper_single_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg"
 walpaper_multi_cmd="feh -q --bg-fill --no-fehbg $HOME/Pictures/background.jpg $HOME/Pictures/background2.jpg"
 polybar_config='~/.config/polybar/config.ini'
-display_single='eDP-1'
-display_multi='DP-1'
+display_single='eDP1'
+display_multi='DP1'
 
 (
   flock 200
